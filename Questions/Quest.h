@@ -6,21 +6,8 @@
 class Quest
 {
 public:
-    Quest() {}
-    Quest(QString pytanie, QString a, QString b, QString c, QString d, QChar poprawna, quint8 poziom)
-    {
-        question = pytanie;
-        anserwA = a;
-        anserwB = b;
-        anserwC = c;
-        anserwD = d;
-        correct = poprawna;
-        level = poziom;
-
-        if(!valid())
-            ;// blad
-    }
-
+    //Quest() {}
+    Quest(QString pytanie, QString a, QString b, QString c, QString d, QChar poprawna, quint8 poziom);
     QString question;
 
     QString anserwA;
@@ -31,27 +18,7 @@ public:
     QChar correct;
     quint8 level;
 
-    bool valid()
-    {
-        if(question.isEmpty())
-            return false;
-
-        if(anserwA.isEmpty())
-            return false;
-        if(anserwB.isEmpty())
-            return false;
-        if(anserwC.isEmpty())
-            return false;
-        if(anserwD.isEmpty())
-            return false;
-
-        if(correct.isNull() || correct.isNumber())
-            return false;
-        if(!level || level > 5|| level < 1)
-            return false;
-
-        return true;
-    }
+    bool valid();
 
 };
 #endif //QUEST_H

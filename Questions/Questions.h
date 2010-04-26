@@ -1,7 +1,7 @@
 #ifndef QUESTIONS_H
 #define QUESTIONS_H
 
-#include "quest.h"
+#include "Quest.h"
 #include <QtCore>
 
 class Questions
@@ -22,31 +22,24 @@ public:
     //void set_description(QString value) { description = value; }
     //void set_filename(QString value) { filename = value; }
 
-    QList<Quest> makeQuiz();
-    Quest GetRandomQuest(QList<Quest> questsList);
 
-    void recycling(QList<Quest> rest);
+
 
     void addQuest(Quest quest);
 
     bool loadFile(QString file);
 
     bool saveFile(QString file);
+    void test();
 
-    void ResetData()
-    {
-        description.clear();
-        filename.clear();
-        questList1.clear();
-        questList2.clear();
-        questList3.clear();
-        questList4.clear();
-        questList5.clear();
-    }
 
 private:
     QString description;
     QString filename;
+
+    void ResetData();
+    Quest GetRandomQuest(QList<Quest> questsList);
+
 
 };
 #endif //QUESTIONS_H

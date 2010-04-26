@@ -1,4 +1,5 @@
 #include "Questions.h"
+#include <QtXml>
 
 
 Questions::Questions(QString opis, QString nazwa)
@@ -97,3 +98,23 @@ bool Questions::saveFile(QString file)
     save << questList5;
     return true;
 }
+
+void Questions::ResetData()
+    {
+        description.clear();
+        filename.clear();
+        questList1.clear();
+        questList2.clear();
+        questList3.clear();
+        questList4.clear();
+        questList5.clear();
+    }
+
+/** metoda testująca zawartość klasy - na razy drukująca w konsoli kolejne pytania */
+void Question::test()
+{
+
+}
+
+
+
