@@ -6,17 +6,17 @@
 class Quest
 {
 public:
-    //Quest() {}
-    Quest(QString pytanie, QString a, QString b, QString c, QString d, QChar poprawna, quint8 poziom);
+    Quest() {}
+    Quest(QString pytanie, QString a, QString b, QString c, QString d, QChar poprawna, int poziom);
     QString question;
 
-    QString anserwA;
-    QString anserwB;
-    QString anserwC;
-    QString anserwD;
+    QString A;
+    QString B;
+    QString C;
+    QString D;
 
     QChar correct;
-    quint8 level;
+    int level;
 
     bool valid();
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XMI verified="false" xmi.version="1.2" timestamp="2010-04-26T22:25:58" xmlns:UML="http://schema.omg.org/spec/UML/1.3" >
+<XMI verified="false" xmi.version="1.2" timestamp="2010-04-26T23:13:39" xmlns:UML="http://schema.omg.org/spec/UML/1.3" >
  <XMI.header>
   <XMI.documentation>
    <XMI.exporter>umbrello uml modeller http://uml.sf.net</XMI.exporter>
@@ -239,11 +239,11 @@
       <diagrams>
        <diagram showopsig="1" linecolor="#ff0000" snapx="10" showattribassocs="1" snapy="10" linewidth="0" showattsig="1" showpubliconly="0" showpackage="1" showstereotype="1" name="diagram klasy" font="DejaVu Sans,8,-1,5,50,0,0,0,0,0" canvasheight="594" canvaswidth="1043" localid="" snapcsgrid="0" showgrid="1" showops="1" usefillcolor="1" fillcolor="#ffff00" zoom="100" xmi.id="cR4xo62cYJE9" documentation="" showscope="1" snapgrid="0" showatts="1" type="1" >
         <widgets>
-         <classwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="none" showoperations="1" usesdiagramusefillcolor="0" showpubliconly="0" showpackage="1" x="66" showattsigs="601" showstereotype="1" y="112" showattributes="1" font="DejaVu Sans,8,-1,5,75,0,0,0,0,0" width="139" isinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="KpmwQlND6COR" showscope="1" height="137" showopsigs="601" />
-         <classwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="none" showoperations="1" usesdiagramusefillcolor="0" showpubliconly="0" showpackage="1" x="271" showattsigs="601" showstereotype="1" y="100" showattributes="1" font="DejaVu Sans,8,-1,5,75,0,0,0,0,0" width="175" isinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="D5XynCpUxpR0" showscope="1" height="154" showopsigs="601" />
-         <classwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="none" showoperations="1" usesdiagramusefillcolor="0" showpubliconly="0" showpackage="1" x="393" showattsigs="601" showstereotype="1" y="328" showattributes="1" font="DejaVu Sans,8,-1,5,75,0,0,0,0,0" width="171" isinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="OvMcLLH6Tjpx" showscope="1" height="112" showopsigs="601" />
-         <classwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="none" showoperations="1" usesdiagramusefillcolor="0" showpubliconly="0" showpackage="1" x="112" showattsigs="601" showstereotype="1" y="331" showattributes="1" font="DejaVu Sans,8,-1,5,75,0,0,0,0,0" width="216" isinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="7vLlGLMWcZJa" showscope="1" height="168" showopsigs="601" />
-         <notewidget width="256" showstereotype="1" x="548" noteType="0" y="76" usesdiagramusefillcolor="1" usesdiagramfillcolor="0" isinstance="0" fillcolor="#b4fff0" height="231" linecolor="none" xmi.id="FOw2rFKHVqy9" usefillcolor="1" linewidth="none" font="DejaVu Sans,8,-1,5,50,0,0,0,0,0" text="&lt;xml encoding=&quot;utf-8&quot;>&#xa;&lt;root>&#xa;&lt;description>opis testu&lt;/description>&#xa;&lt;quest>&#xa;&lt;level>liczba 1-5&lt;/level>&#xa;&lt;question>treść pytania&lt;/question>&#xa;&lt;a>odp a&lt;/a>&#xa;&lt;b>odp b&lt;/b>&#xa;&lt;c>odp c&lt;/c>&#xa;&lt;d>odp d&lt;/d>&#xa;&lt;proper>litera&lt;/proper>&#xa;&lt;/quest>&#xa;&lt;/root>" />
+         <classwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="none" showoperations="1" usesdiagramusefillcolor="0" showpubliconly="0" showpackage="1" x="66" showattsigs="601" showstereotype="1" y="112" showattributes="1" font="DejaVu Sans,8,-1,5,50,0,0,0,0,0" width="139" isinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="KpmwQlND6COR" showscope="1" height="137" showopsigs="601" />
+         <classwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="none" showoperations="1" usesdiagramusefillcolor="0" showpubliconly="0" showpackage="1" x="271" showattsigs="601" showstereotype="1" y="100" showattributes="1" font="DejaVu Sans,8,-1,5,50,0,0,0,0,0" width="175" isinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="D5XynCpUxpR0" showscope="1" height="154" showopsigs="601" />
+         <classwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="none" showoperations="1" usesdiagramusefillcolor="0" showpubliconly="0" showpackage="1" x="393" showattsigs="601" showstereotype="1" y="328" showattributes="1" font="DejaVu Sans,8,-1,5,50,0,0,0,0,0" width="171" isinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="OvMcLLH6Tjpx" showscope="1" height="112" showopsigs="601" />
+         <classwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="none" showoperations="1" usesdiagramusefillcolor="0" showpubliconly="0" showpackage="1" x="112" showattsigs="601" showstereotype="1" y="331" showattributes="1" font="DejaVu Sans,8,-1,5,50,0,0,0,0,0" width="216" isinstance="0" usefillcolor="1" fillcolor="#ffff00" xmi.id="7vLlGLMWcZJa" showscope="1" height="168" showopsigs="601" />
+         <notewidget width="256" showstereotype="1" x="549" noteType="0" y="77" usesdiagramusefillcolor="1" usesdiagramfillcolor="0" isinstance="0" fillcolor="#b4fff0" height="231" linecolor="none" xmi.id="FOw2rFKHVqy9" usefillcolor="1" linewidth="none" font="DejaVu Sans,8,-1,5,50,0,0,0,0,0" text="&lt;xml encoding=&quot;utf-8&quot;>&#xa;&lt;root>&#xa;&lt;description>opis testu&lt;/description>&#xa;&lt;quest>&#xa;&lt;level>liczba 1-5&lt;/level>&#xa;&lt;question>treść pytania&lt;/question>&#xa;&lt;a>odp a&lt;/a>&#xa;&lt;b>odp b&lt;/b>&#xa;&lt;c>odp c&lt;/c>&#xa;&lt;d>odp d&lt;/d>&#xa;&lt;proper>litera&lt;/proper>&#xa;&lt;/quest>&#xa;&lt;/root>" />
          <boxwidget width="779" showstereotype="1" x="39" y="61" usesdiagramusefillcolor="1" usesdiagramfillcolor="1" isinstance="0" fillcolor="none" height="505" linecolor="#000000" xmi.id="YqfqPnLlqOpL" usefillcolor="1" linewidth="none" font="DejaVu Sans,8,-1,5,50,0,0,0,0,0" />
         </widgets>
         <messages/>
@@ -259,14 +259,14 @@
            <startpoint startx="328" starty="331" />
            <endpoint endx="328" endy="254" />
           </linepath>
-          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="253" showstereotype="1" y="279" text="questions" font="DejaVu Sans,8,-1,5,50,0,0,0,0,0" pretext="-" role="710" width="68" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="7aCq2n93GKke" height="18" />
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="253" showstereotype="1" y="279" text="questions" font="DejaVu Sans,8,-1,5,50,0,0,0,0,0" pretext="-" role="710" width="68" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="SYVpYtgQk5i9" height="18" />
          </assocwidget>
          <assocwidget indexa="1" indexb="2" visibilityA="0" widgetaid="OvMcLLH6Tjpx" visibilityB="0" linecolor="none" changeabilityA="900" totalcounta="2" xmi.id="FL3iD9RoCUyb" changeabilityB="900" widgetbid="D5XynCpUxpR0" totalcountb="3" type="510" linewidth="none" >
           <linepath>
            <startpoint startx="420" starty="328" />
            <endpoint endx="420" endy="254" />
           </linepath>
-          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="354" showstereotype="1" y="256" text="questions" font="DejaVu Sans,8,-1,5,50,0,0,0,0,0" pretext="-" role="710" width="68" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="NFYOMn4QevaJ" height="18" />
+          <floatingtext linecolor="none" usesdiagramfillcolor="1" linewidth="none" usesdiagramusefillcolor="1" x="354" showstereotype="1" y="256" text="questions" font="DejaVu Sans,8,-1,5,50,0,0,0,0,0" pretext="-" role="710" width="68" isinstance="0" posttext="" usefillcolor="1" fillcolor="none" xmi.id="zLWOLKYyXfvJ" height="18" />
          </assocwidget>
         </associations>
        </diagram>
@@ -708,11 +708,11 @@
         </header>
        </codeaccessormethod>
       </codeclassfield>
-      <codeclassfield role_id="1" listClassName="" field_type="4" parent_id="uyDLcIStaZSk" writeOutMethods="true" initialValue="" >
+      <codeclassfield role_id="0" listClassName="" field_type="4" parent_id="uyDLcIStaZSk" writeOutMethods="true" initialValue="" >
        <header>
         <cppcodedocumentation tag="" />
        </header>
-       <ccfdeclarationcodeblock role_id="1" tag="" parent_id="uyDLcIStaZSk" writeOutText="false" indentLevel="1" text="public Quest ;" canDelete="false" >
+       <ccfdeclarationcodeblock role_id="1" tag="" parent_id="uyDLcIStaZSk" writeOutText="false" indentLevel="1" text="public Questions ;" canDelete="false" >
         <header>
          <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
         </header>
@@ -848,7 +848,7 @@
           <cppcodedocumentation tag="" />
          </header>
         </codeaccessormethod>
-        <codeaccessormethod role_id="0" tag="hblock_tag_17" accessType="3" parent_id="uyDLcIStaZSk" writeOutText="false" classfield_id="uyDLcIStaZSk" text="int size = %VARNAME%.size();&amp;#010;for ( int i = 0; i &lt; size; ++i) {&amp;#010;&#x9;Questions item = %VARNAME%.at(i);&amp;#010;&#x9;if(item == value) {&amp;#010;&#x9;&#x9;vector&lt;Questions>::iterator it = %VARNAME%.begin() + i;&amp;#010;&#x9;&#x9;%VARNAME%.erase(it);&amp;#010;&#x9;&#x9;return;&amp;#010;&#x9;}&amp;#010; }" canDelete="false" >
+        <codeaccessormethod role_id="0" tag="hblock_tag_17" accessType="3" parent_id="uyDLcIStaZSk" writeOutText="false" classfield_id="uyDLcIStaZSk" text="int size = %VARNAME%.size();&amp;#010;for ( int i = 0; i &lt; size; ++i) {&amp;#010;&#x9;Quest item = %VARNAME%.at(i);&amp;#010;&#x9;if(item == value) {&amp;#010;&#x9;&#x9;vector&lt;Quest>::iterator it = %VARNAME%.begin() + i;&amp;#010;&#x9;&#x9;%VARNAME%.erase(it);&amp;#010;&#x9;&#x9;return;&amp;#010;&#x9;}&amp;#010; }" canDelete="false" >
          <header>
           <cppcodedocumentation tag="" />
          </header>
@@ -1120,11 +1120,11 @@
         </header>
        </codeaccessormethod>
       </codeclassfield>
-      <codeclassfield role_id="0" listClassName="" field_type="4" parent_id="uyDLcIStaZSk" writeOutMethods="true" initialValue="" >
+      <codeclassfield role_id="1" listClassName="" field_type="4" parent_id="uyDLcIStaZSk" writeOutMethods="true" initialValue="" >
        <header>
         <cppcodedocumentation tag="" />
        </header>
-       <ccfdeclarationcodeblock role_id="0" tag="" parent_id="uyDLcIStaZSk" writeOutText="false" indentLevel="1" text="public Questions ;" canDelete="false" >
+       <ccfdeclarationcodeblock role_id="0" tag="" parent_id="uyDLcIStaZSk" writeOutText="false" indentLevel="1" text="public Quest ;" canDelete="false" >
         <header>
          <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
         </header>
@@ -1144,7 +1144,7 @@
          <cppcodedocumentation tag="" />
         </header>
        </codeaccessormethod>
-       <codeaccessormethod role_id="0" tag="hblock_tag_17" accessType="3" parent_id="uyDLcIStaZSk" writeOutText="false" classfield_id="uyDLcIStaZSk" text="int size = %VARNAME%.size();&amp;#010;for ( int i = 0; i &lt; size; ++i) {&amp;#010;&#x9;Questions item = %VARNAME%.at(i);&amp;#010;&#x9;if(item == value) {&amp;#010;&#x9;&#x9;vector&lt;Questions>::iterator it = %VARNAME%.begin() + i;&amp;#010;&#x9;&#x9;%VARNAME%.erase(it);&amp;#010;&#x9;&#x9;return;&amp;#010;&#x9;}&amp;#010; }" canDelete="false" >
+       <codeaccessormethod role_id="0" tag="hblock_tag_17" accessType="3" parent_id="uyDLcIStaZSk" writeOutText="false" classfield_id="uyDLcIStaZSk" text="int size = %VARNAME%.size();&amp;#010;for ( int i = 0; i &lt; size; ++i) {&amp;#010;&#x9;Quest item = %VARNAME%.at(i);&amp;#010;&#x9;if(item == value) {&amp;#010;&#x9;&#x9;vector&lt;Quest>::iterator it = %VARNAME%.begin() + i;&amp;#010;&#x9;&#x9;%VARNAME%.erase(it);&amp;#010;&#x9;&#x9;return;&amp;#010;&#x9;}&amp;#010; }" canDelete="false" >
         <header>
          <cppcodedocumentation tag="" />
         </header>
@@ -1155,11 +1155,11 @@
         </header>
        </codeaccessormethod>
       </codeclassfield>
-      <codeclassfield role_id="1" listClassName="" field_type="4" parent_id="3uS2y6zxQmdG" writeOutMethods="true" initialValue="" >
+      <codeclassfield role_id="0" listClassName="" field_type="4" parent_id="3uS2y6zxQmdG" writeOutMethods="true" initialValue="" >
        <header>
         <cppcodedocumentation tag="" />
        </header>
-       <ccfdeclarationcodeblock role_id="0" tag="" parent_id="3uS2y6zxQmdG" writeOutText="false" indentLevel="1" text="public Quiz ;" canDelete="false" >
+       <ccfdeclarationcodeblock role_id="0" tag="" parent_id="3uS2y6zxQmdG" writeOutText="false" indentLevel="1" text="public Questions ;" canDelete="false" >
         <header>
          <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
         </header>
@@ -1260,11 +1260,11 @@
         </header>
        </codeaccessormethod>
       </codeclassfield>
-      <codeclassfield role_id="1" listClassName="" field_type="4" parent_id="rG4LJ3qdjKCr" writeOutMethods="true" initialValue="" >
+      <codeclassfield role_id="0" listClassName="" field_type="4" parent_id="rG4LJ3qdjKCr" writeOutMethods="true" initialValue="" >
        <header>
         <cppcodedocumentation tag="" />
        </header>
-       <ccfdeclarationcodeblock role_id="0" tag="" parent_id="rG4LJ3qdjKCr" writeOutText="false" indentLevel="1" text="public Quiz ;" canDelete="false" >
+       <ccfdeclarationcodeblock role_id="0" tag="" parent_id="rG4LJ3qdjKCr" writeOutText="false" indentLevel="1" text="public Questions ;" canDelete="false" >
         <header>
          <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
         </header>
@@ -1295,11 +1295,11 @@
         </header>
        </codeaccessormethod>
       </codeclassfield>
-      <codeclassfield role_id="0" listClassName="" field_type="4" parent_id="dl6WpjdFetBK" writeOutMethods="true" initialValue="" >
+      <codeclassfield role_id="1" listClassName="" field_type="4" parent_id="dl6WpjdFetBK" writeOutMethods="true" initialValue="" >
        <header>
         <cppcodedocumentation tag="" />
        </header>
-       <ccfdeclarationcodeblock role_id="1" tag="" parent_id="dl6WpjdFetBK" writeOutText="false" indentLevel="1" text="public Quiz ;" canDelete="false" >
+       <ccfdeclarationcodeblock role_id="1" tag="" parent_id="dl6WpjdFetBK" writeOutText="false" indentLevel="1" text="public Questions ;" canDelete="false" >
         <header>
          <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
         </header>
@@ -1522,11 +1522,11 @@
         </header>
        </codeaccessormethod>
       </codeclassfield>
-      <codeclassfield role_id="0" listClassName="" field_type="4" parent_id="3uS2y6zxQmdG" writeOutMethods="true" initialValue="" >
+      <codeclassfield role_id="1" listClassName="" field_type="4" parent_id="3uS2y6zxQmdG" writeOutMethods="true" initialValue="" >
        <header>
         <cppcodedocumentation tag="" />
        </header>
-       <ccfdeclarationcodeblock role_id="1" tag="" parent_id="3uS2y6zxQmdG" writeOutText="false" indentLevel="1" text="public Questions ;" canDelete="false" >
+       <ccfdeclarationcodeblock role_id="1" tag="" parent_id="3uS2y6zxQmdG" writeOutText="false" indentLevel="1" text="public Quiz ;" canDelete="false" >
         <header>
          <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
         </header>
@@ -1557,11 +1557,11 @@
         </header>
        </codeaccessormethod>
       </codeclassfield>
-      <codeclassfield role_id="0" listClassName="" field_type="4" parent_id="rG4LJ3qdjKCr" writeOutMethods="true" initialValue="" >
+      <codeclassfield role_id="1" listClassName="" field_type="4" parent_id="rG4LJ3qdjKCr" writeOutMethods="true" initialValue="" >
        <header>
         <cppcodedocumentation tag="" />
        </header>
-       <ccfdeclarationcodeblock role_id="1" tag="" parent_id="rG4LJ3qdjKCr" writeOutText="false" indentLevel="1" text="public Questions ;" canDelete="false" >
+       <ccfdeclarationcodeblock role_id="1" tag="" parent_id="rG4LJ3qdjKCr" writeOutText="false" indentLevel="1" text="public Quiz ;" canDelete="false" >
         <header>
          <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
         </header>
@@ -1592,11 +1592,11 @@
         </header>
        </codeaccessormethod>
       </codeclassfield>
-      <codeclassfield role_id="1" listClassName="" field_type="4" parent_id="dl6WpjdFetBK" writeOutMethods="true" initialValue="" >
+      <codeclassfield role_id="0" listClassName="" field_type="4" parent_id="dl6WpjdFetBK" writeOutMethods="true" initialValue="" >
        <header>
         <cppcodedocumentation tag="" />
        </header>
-       <ccfdeclarationcodeblock role_id="0" tag="" parent_id="dl6WpjdFetBK" writeOutText="false" indentLevel="1" text="public Questions ;" canDelete="false" >
+       <ccfdeclarationcodeblock role_id="0" tag="" parent_id="dl6WpjdFetBK" writeOutText="false" indentLevel="1" text="public Quiz ;" canDelete="false" >
         <header>
          <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
         </header>
@@ -2193,11 +2193,11 @@
         </header>
        </codeaccessormethod>
       </codeclassfield>
-      <codeclassfield role_id="1" listClassName="" field_type="4" parent_id="uyDLcIStaZSk" writeOutMethods="true" initialValue="" >
+      <codeclassfield role_id="0" listClassName="" field_type="4" parent_id="uyDLcIStaZSk" writeOutMethods="true" initialValue="" >
        <header>
         <cppcodedocumentation tag="" />
        </header>
-       <ccfdeclarationcodeblock role_id="1" tag="_7" parent_id="uyDLcIStaZSk" writeOutText="false" indentLevel="1" text=" Quest ;" canDelete="false" >
+       <ccfdeclarationcodeblock role_id="1" tag="_7" parent_id="uyDLcIStaZSk" writeOutText="false" indentLevel="1" text=" Questions ;" canDelete="false" >
         <header>
          <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
         </header>
@@ -2257,456 +2257,6 @@
           <cppcodedocumentation tag="" writeOutText="false" />
          </header>
         </codeblockwithcomments>
-        <cppheaderclassdeclarationblock tag="classDeclarationBlock" parent_id="D5XynCpUxpR0" canDelete="false" >
-         <header>
-          <cppcodedocumentation tag="" text="Class Questions&amp;#010;" />
-         </header>
-         <textblocks>
-          <hierarchicalcodeblock tag="publicBlock" canDelete="false" >
-           <header>
-            <cppcodedocumentation tag="" text="Public stuff" />
-           </header>
-           <textblocks>
-            <hierarchicalcodeblock tag="publicFieldsDecl" indentLevel="1" canDelete="false" >
-             <header>
-              <cppcodedocumentation tag="" indentLevel="1" text="Fields" />
-             </header>
-             <textblocks>
-              <ccfdeclarationcodeblock tag="tblock_0" parent_id="aUvHzHU7SVXE" indentLevel="1" text=" QList&lt;Quest> questList1;" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-               </header>
-              </ccfdeclarationcodeblock>
-              <ccfdeclarationcodeblock tag="_0" parent_id="vwxARrmnAlUi" indentLevel="1" text=" QList&lt;Quest> questList2;" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-               </header>
-              </ccfdeclarationcodeblock>
-              <ccfdeclarationcodeblock tag="_1" parent_id="mBHT5Z5onbGu" indentLevel="1" text=" QList&lt;Quest> questList3;" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-               </header>
-              </ccfdeclarationcodeblock>
-              <ccfdeclarationcodeblock tag="_2" parent_id="6rkLOT9Kncj2" indentLevel="1" text=" QList&lt;Quest> questList4;" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-               </header>
-              </ccfdeclarationcodeblock>
-              <ccfdeclarationcodeblock tag="_3" parent_id="54TbC7jyH0QM" indentLevel="1" text=" QList&lt;Quest> questList5;" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-               </header>
-              </ccfdeclarationcodeblock>
-              <ccfdeclarationcodeblock role_id="0" tag="_4" parent_id="uyDLcIStaZSk" writeOutText="false" indentLevel="1" text=" Questions ;" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-               </header>
-              </ccfdeclarationcodeblock>
-              <ccfdeclarationcodeblock role_id="0" tag="_5" parent_id="3uS2y6zxQmdG" writeOutText="false" indentLevel="1" text=" Quiz ;" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-               </header>
-              </ccfdeclarationcodeblock>
-              <ccfdeclarationcodeblock role_id="1" tag="_7" parent_id="UcdcEmkiKw8z" writeOutText="false" indentLevel="1" text=" Questions ;" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-               </header>
-              </ccfdeclarationcodeblock>
-              <ccfdeclarationcodeblock role_id="0" tag="_8" parent_id="rG4LJ3qdjKCr" writeOutText="false" indentLevel="1" text=" Quiz ;" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-               </header>
-              </ccfdeclarationcodeblock>
-              <ccfdeclarationcodeblock role_id="1" tag="_9" parent_id="dl6WpjdFetBK" writeOutText="false" indentLevel="1" text=" Quiz ;" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-               </header>
-              </ccfdeclarationcodeblock>
-             </textblocks>
-            </hierarchicalcodeblock>
-            <hierarchicalcodeblock tag="pubMethodsBlock" indentLevel="1" canDelete="false" >
-             <header>
-              <cppcodedocumentation tag="" indentLevel="1" />
-             </header>
-             <textblocks>
-              <hierarchicalcodeblock tag="constructionMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Constructors" />
-               </header>
-               <textblocks>
-                <codeblockwithcomments tag="emptyconstructor" indentLevel="1" text="Questions ( ) { }" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" text="Empty Constructor" />
-                 </header>
-                </codeblockwithcomments>
-               </textblocks>
-              </hierarchicalcodeblock>
-              <hierarchicalcodeblock tag="accessorMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Accessor Methods" />
-               </header>
-               <textblocks>
-                <hierarchicalcodeblock tag="pubStaticAccessorMethods" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-                 </header>
-                 <textblocks/>
-                </hierarchicalcodeblock>
-                <hierarchicalcodeblock tag="pubRegularAccessorMethods" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-                 </header>
-                 <textblocks>
-                  <codeaccessormethod tag="hblock_tag_0" accessType="0" parent_id="aUvHzHU7SVXE" indentLevel="1" classfield_id="aUvHzHU7SVXE" text="return questList1;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod tag="hblock_tag_7" accessType="1" parent_id="aUvHzHU7SVXE" indentLevel="1" classfield_id="aUvHzHU7SVXE" text="questList1 = value;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod tag="hblock_tag_8" accessType="0" parent_id="vwxARrmnAlUi" indentLevel="1" classfield_id="vwxARrmnAlUi" text="return questList2;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod tag="hblock_tag_9" accessType="1" parent_id="vwxARrmnAlUi" indentLevel="1" classfield_id="vwxARrmnAlUi" text="questList2 = value;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod tag="hblock_tag_10" accessType="0" parent_id="mBHT5Z5onbGu" indentLevel="1" classfield_id="mBHT5Z5onbGu" text="return questList3;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod tag="hblock_tag_11" accessType="1" parent_id="mBHT5Z5onbGu" indentLevel="1" classfield_id="mBHT5Z5onbGu" text="questList3 = value;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod tag="hblock_tag_12" accessType="0" parent_id="6rkLOT9Kncj2" indentLevel="1" classfield_id="6rkLOT9Kncj2" text="return questList4;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod tag="hblock_tag_13" accessType="1" parent_id="6rkLOT9Kncj2" indentLevel="1" classfield_id="6rkLOT9Kncj2" text="questList4 = value;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod tag="hblock_tag_14" accessType="0" parent_id="54TbC7jyH0QM" indentLevel="1" classfield_id="54TbC7jyH0QM" text="return questList5;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod tag="hblock_tag_15" accessType="1" parent_id="54TbC7jyH0QM" indentLevel="1" classfield_id="54TbC7jyH0QM" text="questList5 = value;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod tag="hblock_tag_16" accessType="0" parent_id="mwMijUMCAB3Q" indentLevel="1" classfield_id="mwMijUMCAB3Q" text="return description;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod tag="hblock_tag_17" accessType="1" parent_id="mwMijUMCAB3Q" indentLevel="1" classfield_id="mwMijUMCAB3Q" text="description = value;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod tag="hblock_tag_18" accessType="0" parent_id="CnX1Zu4XmQzS" indentLevel="1" classfield_id="CnX1Zu4XmQzS" text="return filename;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod tag="hblock_tag_19" accessType="1" parent_id="CnX1Zu4XmQzS" indentLevel="1" classfield_id="CnX1Zu4XmQzS" text="filename = value;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="0" tag="hblock_tag_25" accessType="0" parent_id="uyDLcIStaZSk" writeOutText="false" indentLevel="1" classfield_id="uyDLcIStaZSk" text="return ;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="0" tag="hblock_tag_26" accessType="1" parent_id="uyDLcIStaZSk" writeOutText="false" indentLevel="1" classfield_id="uyDLcIStaZSk" text=" = value;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="0" tag="hblock_tag_27" accessType="2" parent_id="uyDLcIStaZSk" writeOutText="false" indentLevel="1" classfield_id="uyDLcIStaZSk" text="%VARNAME%.push_back(value);" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="0" tag="hblock_tag_28" accessType="3" parent_id="uyDLcIStaZSk" writeOutText="false" indentLevel="1" classfield_id="uyDLcIStaZSk" text="int size = %VARNAME%.size();&amp;#010;for ( int i = 0; i &lt; size; ++i) {&amp;#010;&#x9;Questions item = %VARNAME%.at(i);&amp;#010;&#x9;if(item == value) {&amp;#010;&#x9;&#x9;vector&lt;Questions>::iterator it = %VARNAME%.begin() + i;&amp;#010;&#x9;&#x9;%VARNAME%.erase(it);&amp;#010;&#x9;&#x9;return;&amp;#010;&#x9;}&amp;#010; }" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="0" tag="hblock_tag_29" accessType="4" parent_id="uyDLcIStaZSk" writeOutText="false" indentLevel="1" classfield_id="uyDLcIStaZSk" text="return ;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="0" tag="hblock_tag_30" accessType="0" parent_id="3uS2y6zxQmdG" writeOutText="false" indentLevel="1" classfield_id="3uS2y6zxQmdG" text="return ;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="0" tag="hblock_tag_31" accessType="1" parent_id="3uS2y6zxQmdG" writeOutText="false" indentLevel="1" classfield_id="3uS2y6zxQmdG" text=" = value;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="0" tag="hblock_tag_32" accessType="2" parent_id="3uS2y6zxQmdG" writeOutText="false" indentLevel="1" classfield_id="3uS2y6zxQmdG" text="%VARNAME%.push_back(value);" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="0" tag="hblock_tag_33" accessType="3" parent_id="3uS2y6zxQmdG" writeOutText="false" indentLevel="1" classfield_id="3uS2y6zxQmdG" text="int size = %VARNAME%.size();&amp;#010;for ( int i = 0; i &lt; size; ++i) {&amp;#010;&#x9;Quiz item = %VARNAME%.at(i);&amp;#010;&#x9;if(item == value) {&amp;#010;&#x9;&#x9;vector&lt;Quiz>::iterator it = %VARNAME%.begin() + i;&amp;#010;&#x9;&#x9;%VARNAME%.erase(it);&amp;#010;&#x9;&#x9;return;&amp;#010;&#x9;}&amp;#010; }" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="0" tag="hblock_tag_34" accessType="4" parent_id="3uS2y6zxQmdG" writeOutText="false" indentLevel="1" classfield_id="3uS2y6zxQmdG" text="return ;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="1" tag="hblock_tag_38" accessType="0" parent_id="UcdcEmkiKw8z" writeOutText="false" indentLevel="1" classfield_id="UcdcEmkiKw8z" text="return ;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="1" tag="hblock_tag_39" accessType="1" parent_id="UcdcEmkiKw8z" writeOutText="false" indentLevel="1" classfield_id="UcdcEmkiKw8z" text=" = value;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="1" tag="hblock_tag_40" accessType="2" parent_id="UcdcEmkiKw8z" writeOutText="false" indentLevel="1" classfield_id="UcdcEmkiKw8z" text="%VARNAME%.push_back(value);" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="1" tag="hblock_tag_41" accessType="3" parent_id="UcdcEmkiKw8z" writeOutText="false" indentLevel="1" classfield_id="UcdcEmkiKw8z" text="int size = %VARNAME%.size();&amp;#010;for ( int i = 0; i &lt; size; ++i) {&amp;#010;&#x9;Questions item = %VARNAME%.at(i);&amp;#010;&#x9;if(item == value) {&amp;#010;&#x9;&#x9;vector&lt;Questions>::iterator it = %VARNAME%.begin() + i;&amp;#010;&#x9;&#x9;%VARNAME%.erase(it);&amp;#010;&#x9;&#x9;return;&amp;#010;&#x9;}&amp;#010; }" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="1" tag="hblock_tag_42" accessType="4" parent_id="UcdcEmkiKw8z" writeOutText="false" indentLevel="1" classfield_id="UcdcEmkiKw8z" text="return ;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="1" tag="hblock_tag_43" accessType="3" parent_id="UcdcEmkiKw8z" writeOutText="false" indentLevel="1" classfield_id="UcdcEmkiKw8z" text="int size = %VARNAME%.size();&amp;#010;for ( int i = 0; i &lt; size; ++i) {&amp;#010;&#x9;Questions item = %VARNAME%.at(i);&amp;#010;&#x9;if(item == value) {&amp;#010;&#x9;&#x9;vector&lt;Questions>::iterator it = %VARNAME%.begin() + i;&amp;#010;&#x9;&#x9;%VARNAME%.erase(it);&amp;#010;&#x9;&#x9;return;&amp;#010;&#x9;}&amp;#010; }" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="1" tag="hblock_tag_44" accessType="4" parent_id="UcdcEmkiKw8z" writeOutText="false" indentLevel="1" classfield_id="UcdcEmkiKw8z" text="return ;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="0" tag="hblock_tag_45" accessType="0" parent_id="rG4LJ3qdjKCr" writeOutText="false" indentLevel="1" classfield_id="rG4LJ3qdjKCr" text="return ;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="0" tag="hblock_tag_46" accessType="1" parent_id="rG4LJ3qdjKCr" writeOutText="false" indentLevel="1" classfield_id="rG4LJ3qdjKCr" text=" = value;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="0" tag="hblock_tag_47" accessType="2" parent_id="rG4LJ3qdjKCr" writeOutText="false" indentLevel="1" classfield_id="rG4LJ3qdjKCr" text="%VARNAME%.push_back(value);" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="0" tag="hblock_tag_48" accessType="3" parent_id="rG4LJ3qdjKCr" writeOutText="false" indentLevel="1" classfield_id="rG4LJ3qdjKCr" text="int size = %VARNAME%.size();&amp;#010;for ( int i = 0; i &lt; size; ++i) {&amp;#010;&#x9;Quiz item = %VARNAME%.at(i);&amp;#010;&#x9;if(item == value) {&amp;#010;&#x9;&#x9;vector&lt;Quiz>::iterator it = %VARNAME%.begin() + i;&amp;#010;&#x9;&#x9;%VARNAME%.erase(it);&amp;#010;&#x9;&#x9;return;&amp;#010;&#x9;}&amp;#010; }" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="0" tag="hblock_tag_49" accessType="4" parent_id="rG4LJ3qdjKCr" writeOutText="false" indentLevel="1" classfield_id="rG4LJ3qdjKCr" text="return ;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="1" tag="hblock_tag_50" accessType="0" parent_id="dl6WpjdFetBK" writeOutText="false" indentLevel="1" classfield_id="dl6WpjdFetBK" text="return ;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="1" tag="hblock_tag_51" accessType="1" parent_id="dl6WpjdFetBK" writeOutText="false" indentLevel="1" classfield_id="dl6WpjdFetBK" text=" = value;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="1" tag="hblock_tag_52" accessType="2" parent_id="dl6WpjdFetBK" writeOutText="false" indentLevel="1" classfield_id="dl6WpjdFetBK" text="%VARNAME%.push_back(value);" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="1" tag="hblock_tag_53" accessType="3" parent_id="dl6WpjdFetBK" writeOutText="false" indentLevel="1" classfield_id="dl6WpjdFetBK" text="int size = %VARNAME%.size();&amp;#010;for ( int i = 0; i &lt; size; ++i) {&amp;#010;&#x9;Quiz item = %VARNAME%.at(i);&amp;#010;&#x9;if(item == value) {&amp;#010;&#x9;&#x9;vector&lt;Quiz>::iterator it = %VARNAME%.begin() + i;&amp;#010;&#x9;&#x9;%VARNAME%.erase(it);&amp;#010;&#x9;&#x9;return;&amp;#010;&#x9;}&amp;#010; }" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod role_id="1" tag="hblock_tag_54" accessType="4" parent_id="dl6WpjdFetBK" writeOutText="false" indentLevel="1" classfield_id="dl6WpjdFetBK" text="return ;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                 </textblocks>
-                </hierarchicalcodeblock>
-               </textblocks>
-              </hierarchicalcodeblock>
-              <hierarchicalcodeblock tag="operationMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Operations" />
-               </header>
-               <textblocks>
-                <codeoperation tag="operation_Twfpl2PwVdfL" parent_id="Twfpl2PwVdfL" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" text="&amp;#010;@param file " />
-                 </header>
-                </codeoperation>
-                <codeoperation tag="operation_QaDFj1ifeYOg" parent_id="QaDFj1ifeYOg" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" />
-                 </header>
-                </codeoperation>
-                <codeoperation tag="operation_dpeqO925feLs" parent_id="dpeqO925feLs" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" />
-                 </header>
-                </codeoperation>
-               </textblocks>
-              </hierarchicalcodeblock>
-             </textblocks>
-            </hierarchicalcodeblock>
-           </textblocks>
-          </hierarchicalcodeblock>
-          <hierarchicalcodeblock tag="protectedBlock" canDelete="false" >
-           <header>
-            <cppcodedocumentation tag="" text="Protected stuff" />
-           </header>
-           <textblocks>
-            <hierarchicalcodeblock tag="protectedFieldsDecl" indentLevel="1" canDelete="false" >
-             <header>
-              <cppcodedocumentation tag="" indentLevel="1" text="Fields" />
-             </header>
-             <textblocks/>
-            </hierarchicalcodeblock>
-            <hierarchicalcodeblock tag="protMethodsBlock" indentLevel="1" canDelete="false" >
-             <header>
-              <cppcodedocumentation tag="" indentLevel="1" />
-             </header>
-             <textblocks>
-              <hierarchicalcodeblock tag="constructionMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Constructors" />
-               </header>
-               <textblocks/>
-              </hierarchicalcodeblock>
-              <hierarchicalcodeblock tag="accessorMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Accessor Methods" />
-               </header>
-               <textblocks>
-                <hierarchicalcodeblock tag="protStaticAccessorMethods" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-                 </header>
-                 <textblocks/>
-                </hierarchicalcodeblock>
-                <hierarchicalcodeblock tag="protRegularAccessorMethods" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-                 </header>
-                 <textblocks/>
-                </hierarchicalcodeblock>
-               </textblocks>
-              </hierarchicalcodeblock>
-              <hierarchicalcodeblock tag="operationMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Operations" />
-               </header>
-               <textblocks/>
-              </hierarchicalcodeblock>
-             </textblocks>
-            </hierarchicalcodeblock>
-           </textblocks>
-          </hierarchicalcodeblock>
-          <hierarchicalcodeblock tag="privateBlock" canDelete="false" >
-           <header>
-            <cppcodedocumentation tag="" text="Private stuff" />
-           </header>
-           <textblocks>
-            <hierarchicalcodeblock tag="privateFieldsDecl" indentLevel="1" canDelete="false" >
-             <header>
-              <cppcodedocumentation tag="" indentLevel="1" text="Fields" />
-             </header>
-             <textblocks>
-              <ccfdeclarationcodeblock tag="_5" parent_id="mwMijUMCAB3Q" indentLevel="1" text=" QString description;" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-               </header>
-              </ccfdeclarationcodeblock>
-              <ccfdeclarationcodeblock tag="_6" parent_id="CnX1Zu4XmQzS" indentLevel="1" text=" QString filename;" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-               </header>
-              </ccfdeclarationcodeblock>
-             </textblocks>
-            </hierarchicalcodeblock>
-            <hierarchicalcodeblock tag="privMethodsBlock" indentLevel="1" canDelete="false" >
-             <header>
-              <cppcodedocumentation tag="" indentLevel="1" />
-             </header>
-             <textblocks>
-              <hierarchicalcodeblock tag="constructionMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Constructors" />
-               </header>
-               <textblocks/>
-              </hierarchicalcodeblock>
-              <hierarchicalcodeblock tag="accessorMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Accessor Methods" />
-               </header>
-               <textblocks>
-                <hierarchicalcodeblock tag="privStaticAccessorMethods" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-                 </header>
-                 <textblocks/>
-                </hierarchicalcodeblock>
-                <hierarchicalcodeblock tag="privRegularAccessorMethods" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-                 </header>
-                 <textblocks/>
-                </hierarchicalcodeblock>
-               </textblocks>
-              </hierarchicalcodeblock>
-              <hierarchicalcodeblock tag="operationMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Operations" />
-               </header>
-               <textblocks/>
-              </hierarchicalcodeblock>
-             </textblocks>
-            </hierarchicalcodeblock>
-           </textblocks>
-          </hierarchicalcodeblock>
-         </textblocks>
-        </cppheaderclassdeclarationblock>
        </textblocks>
       </hierarchicalcodeblock>
       <codeblockwithcomments tag="hashDefBlockEnd" text="#endif //QUESTIONS_H" >
@@ -2859,11 +2409,11 @@
         </header>
        </codeaccessormethod>
       </codeclassfield>
-      <codeclassfield role_id="0" listClassName="" field_type="4" parent_id="uyDLcIStaZSk" writeOutMethods="true" initialValue="" >
+      <codeclassfield role_id="1" listClassName="" field_type="4" parent_id="uyDLcIStaZSk" writeOutMethods="true" initialValue="" >
        <header>
         <cppcodedocumentation tag="" />
        </header>
-       <ccfdeclarationcodeblock role_id="0" tag="_4" parent_id="uyDLcIStaZSk" writeOutText="false" indentLevel="1" text=" Questions ;" canDelete="false" >
+       <ccfdeclarationcodeblock role_id="0" tag="_4" parent_id="uyDLcIStaZSk" writeOutText="false" indentLevel="1" text=" Quest ;" canDelete="false" >
         <header>
          <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
         </header>
@@ -2883,7 +2433,7 @@
          <cppcodedocumentation tag="" indentLevel="1" />
         </header>
        </codeaccessormethod>
-       <codeaccessormethod role_id="0" tag="hblock_tag_28" accessType="3" parent_id="uyDLcIStaZSk" writeOutText="false" indentLevel="1" classfield_id="uyDLcIStaZSk" text="int size = %VARNAME%.size();&amp;#010;for ( int i = 0; i &lt; size; ++i) {&amp;#010;&#x9;Questions item = %VARNAME%.at(i);&amp;#010;&#x9;if(item == value) {&amp;#010;&#x9;&#x9;vector&lt;Questions>::iterator it = %VARNAME%.begin() + i;&amp;#010;&#x9;&#x9;%VARNAME%.erase(it);&amp;#010;&#x9;&#x9;return;&amp;#010;&#x9;}&amp;#010; }" canDelete="false" >
+       <codeaccessormethod role_id="0" tag="hblock_tag_28" accessType="3" parent_id="uyDLcIStaZSk" writeOutText="false" indentLevel="1" classfield_id="uyDLcIStaZSk" text="int size = %VARNAME%.size();&amp;#010;for ( int i = 0; i &lt; size; ++i) {&amp;#010;&#x9;Quest item = %VARNAME%.at(i);&amp;#010;&#x9;if(item == value) {&amp;#010;&#x9;&#x9;vector&lt;Quest>::iterator it = %VARNAME%.begin() + i;&amp;#010;&#x9;&#x9;%VARNAME%.erase(it);&amp;#010;&#x9;&#x9;return;&amp;#010;&#x9;}&amp;#010; }" canDelete="false" >
         <header>
          <cppcodedocumentation tag="" indentLevel="1" />
         </header>
@@ -2894,11 +2444,11 @@
         </header>
        </codeaccessormethod>
       </codeclassfield>
-      <codeclassfield role_id="1" listClassName="" field_type="4" parent_id="3uS2y6zxQmdG" writeOutMethods="true" initialValue="" >
+      <codeclassfield role_id="0" listClassName="" field_type="4" parent_id="3uS2y6zxQmdG" writeOutMethods="true" initialValue="" >
        <header>
         <cppcodedocumentation tag="" />
        </header>
-       <ccfdeclarationcodeblock role_id="0" tag="_5" parent_id="3uS2y6zxQmdG" writeOutText="false" indentLevel="1" text=" Quiz ;" canDelete="false" >
+       <ccfdeclarationcodeblock role_id="0" tag="_5" parent_id="3uS2y6zxQmdG" writeOutText="false" indentLevel="1" text=" Questions ;" canDelete="false" >
         <header>
          <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
         </header>
@@ -2999,11 +2549,11 @@
         </header>
        </codeaccessormethod>
       </codeclassfield>
-      <codeclassfield role_id="1" listClassName="" field_type="4" parent_id="rG4LJ3qdjKCr" writeOutMethods="true" initialValue="" >
+      <codeclassfield role_id="0" listClassName="" field_type="4" parent_id="rG4LJ3qdjKCr" writeOutMethods="true" initialValue="" >
        <header>
         <cppcodedocumentation tag="" />
        </header>
-       <ccfdeclarationcodeblock role_id="0" tag="_8" parent_id="rG4LJ3qdjKCr" writeOutText="false" indentLevel="1" text=" Quiz ;" canDelete="false" >
+       <ccfdeclarationcodeblock role_id="0" tag="_8" parent_id="rG4LJ3qdjKCr" writeOutText="false" indentLevel="1" text=" Questions ;" canDelete="false" >
         <header>
          <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
         </header>
@@ -3034,11 +2584,11 @@
         </header>
        </codeaccessormethod>
       </codeclassfield>
-      <codeclassfield role_id="0" listClassName="" field_type="4" parent_id="dl6WpjdFetBK" writeOutMethods="true" initialValue="" >
+      <codeclassfield role_id="1" listClassName="" field_type="4" parent_id="dl6WpjdFetBK" writeOutMethods="true" initialValue="" >
        <header>
         <cppcodedocumentation tag="" />
        </header>
-       <ccfdeclarationcodeblock role_id="1" tag="_9" parent_id="dl6WpjdFetBK" writeOutText="false" indentLevel="1" text=" Quiz ;" canDelete="false" >
+       <ccfdeclarationcodeblock role_id="1" tag="_9" parent_id="dl6WpjdFetBK" writeOutText="false" indentLevel="1" text=" Questions ;" canDelete="false" >
         <header>
          <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
         </header>
@@ -3210,11 +2760,11 @@
         </header>
        </codeaccessormethod>
       </codeclassfield>
-      <codeclassfield role_id="0" listClassName="" field_type="4" parent_id="3uS2y6zxQmdG" writeOutMethods="true" initialValue="" >
+      <codeclassfield role_id="1" listClassName="" field_type="4" parent_id="3uS2y6zxQmdG" writeOutMethods="true" initialValue="" >
        <header>
         <cppcodedocumentation tag="" />
        </header>
-       <ccfdeclarationcodeblock role_id="1" tag="tblock_0" parent_id="3uS2y6zxQmdG" writeOutText="false" indentLevel="1" text=" Questions ;" canDelete="false" >
+       <ccfdeclarationcodeblock role_id="1" tag="tblock_0" parent_id="3uS2y6zxQmdG" writeOutText="false" indentLevel="1" text=" Quiz ;" canDelete="false" >
         <header>
          <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
         </header>
@@ -3245,11 +2795,11 @@
         </header>
        </codeaccessormethod>
       </codeclassfield>
-      <codeclassfield role_id="0" listClassName="" field_type="4" parent_id="rG4LJ3qdjKCr" writeOutMethods="true" initialValue="" >
+      <codeclassfield role_id="1" listClassName="" field_type="4" parent_id="rG4LJ3qdjKCr" writeOutMethods="true" initialValue="" >
        <header>
         <cppcodedocumentation tag="" />
        </header>
-       <ccfdeclarationcodeblock role_id="1" tag="_0" parent_id="rG4LJ3qdjKCr" writeOutText="false" indentLevel="1" text=" Questions ;" canDelete="false" >
+       <ccfdeclarationcodeblock role_id="1" tag="_0" parent_id="rG4LJ3qdjKCr" writeOutText="false" indentLevel="1" text=" Quiz ;" canDelete="false" >
         <header>
          <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
         </header>
@@ -3280,11 +2830,11 @@
         </header>
        </codeaccessormethod>
       </codeclassfield>
-      <codeclassfield role_id="1" listClassName="" field_type="4" parent_id="dl6WpjdFetBK" writeOutMethods="true" initialValue="" >
+      <codeclassfield role_id="0" listClassName="" field_type="4" parent_id="dl6WpjdFetBK" writeOutMethods="true" initialValue="" >
        <header>
         <cppcodedocumentation tag="" />
        </header>
-       <ccfdeclarationcodeblock role_id="0" tag="_1" parent_id="dl6WpjdFetBK" writeOutText="false" indentLevel="1" text=" Questions ;" canDelete="false" >
+       <ccfdeclarationcodeblock role_id="0" tag="_1" parent_id="dl6WpjdFetBK" writeOutText="false" indentLevel="1" text=" Quiz ;" canDelete="false" >
         <header>
          <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
         </header>
@@ -3464,221 +3014,6 @@
           <cppcodedocumentation tag="" writeOutText="false" />
          </header>
         </codeblockwithcomments>
-        <cppheaderclassdeclarationblock tag="classDeclarationBlock" parent_id="OvMcLLH6Tjpx" canDelete="false" >
-         <header>
-          <cppcodedocumentation tag="" text="Class QuizShow&amp;#010;" />
-         </header>
-         <textblocks>
-          <hierarchicalcodeblock tag="publicBlock" canDelete="false" >
-           <header>
-            <cppcodedocumentation tag="" text="Public stuff" />
-           </header>
-           <textblocks>
-            <hierarchicalcodeblock tag="publicFieldsDecl" indentLevel="1" canDelete="false" >
-             <header>
-              <cppcodedocumentation tag="" indentLevel="1" text="Fields" />
-             </header>
-             <textblocks/>
-            </hierarchicalcodeblock>
-            <hierarchicalcodeblock tag="pubMethodsBlock" indentLevel="1" canDelete="false" >
-             <header>
-              <cppcodedocumentation tag="" indentLevel="1" />
-             </header>
-             <textblocks>
-              <hierarchicalcodeblock tag="constructionMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Constructors" />
-               </header>
-               <textblocks>
-                <codeblockwithcomments tag="emptyconstructor" indentLevel="1" text="QuizShow ( ) { }" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" text="Empty Constructor" />
-                 </header>
-                </codeblockwithcomments>
-               </textblocks>
-              </hierarchicalcodeblock>
-              <hierarchicalcodeblock tag="accessorMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Accessor Methods" />
-               </header>
-               <textblocks>
-                <hierarchicalcodeblock tag="pubStaticAccessorMethods" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-                 </header>
-                 <textblocks/>
-                </hierarchicalcodeblock>
-                <hierarchicalcodeblock tag="pubRegularAccessorMethods" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-                 </header>
-                 <textblocks>
-                  <codeaccessormethod tag="hblock_tag_0" accessType="0" parent_id="FL3iD9RoCUyb" indentLevel="1" classfield_id="FL3iD9RoCUyb" text="return questions;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod tag="hblock_tag_1" accessType="1" parent_id="FL3iD9RoCUyb" indentLevel="1" classfield_id="FL3iD9RoCUyb" text="questions = value;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                 </textblocks>
-                </hierarchicalcodeblock>
-               </textblocks>
-              </hierarchicalcodeblock>
-              <hierarchicalcodeblock tag="operationMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Operations" />
-               </header>
-               <textblocks>
-                <codeoperation tag="operation_A4XZgh1jYJkv" parent_id="A4XZgh1jYJkv" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" />
-                 </header>
-                </codeoperation>
-                <codeoperation tag="operation_DZji2KLwkHo5" parent_id="DZji2KLwkHo5" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" />
-                 </header>
-                </codeoperation>
-                <codeoperation tag="operation_r33PLlITOg5b" parent_id="r33PLlITOg5b" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" />
-                 </header>
-                </codeoperation>
-                <codeoperation tag="operation_YepZ1AKKbgye" parent_id="YepZ1AKKbgye" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" text="&amp;#010;@param yes " />
-                 </header>
-                </codeoperation>
-                <codeoperation tag="operation_1mOMr7L4ziaW" parent_id="1mOMr7L4ziaW" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" />
-                 </header>
-                </codeoperation>
-               </textblocks>
-              </hierarchicalcodeblock>
-             </textblocks>
-            </hierarchicalcodeblock>
-           </textblocks>
-          </hierarchicalcodeblock>
-          <hierarchicalcodeblock tag="protectedBlock" canDelete="false" >
-           <header>
-            <cppcodedocumentation tag="" text="Protected stuff" />
-           </header>
-           <textblocks>
-            <hierarchicalcodeblock tag="protectedFieldsDecl" indentLevel="1" canDelete="false" >
-             <header>
-              <cppcodedocumentation tag="" indentLevel="1" text="Fields" />
-             </header>
-             <textblocks/>
-            </hierarchicalcodeblock>
-            <hierarchicalcodeblock tag="protMethodsBlock" indentLevel="1" canDelete="false" >
-             <header>
-              <cppcodedocumentation tag="" indentLevel="1" />
-             </header>
-             <textblocks>
-              <hierarchicalcodeblock tag="constructionMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Constructors" />
-               </header>
-               <textblocks/>
-              </hierarchicalcodeblock>
-              <hierarchicalcodeblock tag="accessorMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Accessor Methods" />
-               </header>
-               <textblocks>
-                <hierarchicalcodeblock tag="protStaticAccessorMethods" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-                 </header>
-                 <textblocks/>
-                </hierarchicalcodeblock>
-                <hierarchicalcodeblock tag="protRegularAccessorMethods" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-                 </header>
-                 <textblocks/>
-                </hierarchicalcodeblock>
-               </textblocks>
-              </hierarchicalcodeblock>
-              <hierarchicalcodeblock tag="operationMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Operations" />
-               </header>
-               <textblocks/>
-              </hierarchicalcodeblock>
-             </textblocks>
-            </hierarchicalcodeblock>
-           </textblocks>
-          </hierarchicalcodeblock>
-          <hierarchicalcodeblock tag="privateBlock" canDelete="false" >
-           <header>
-            <cppcodedocumentation tag="" text="Private stuff" />
-           </header>
-           <textblocks>
-            <hierarchicalcodeblock tag="privateFieldsDecl" indentLevel="1" canDelete="false" >
-             <header>
-              <cppcodedocumentation tag="" indentLevel="1" text="Fields" />
-             </header>
-             <textblocks>
-              <ccfdeclarationcodeblock tag="tblock_0" parent_id="FL3iD9RoCUyb" indentLevel="1" text=" Questions questions;" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-               </header>
-              </ccfdeclarationcodeblock>
-             </textblocks>
-            </hierarchicalcodeblock>
-            <hierarchicalcodeblock tag="privMethodsBlock" indentLevel="1" canDelete="false" >
-             <header>
-              <cppcodedocumentation tag="" indentLevel="1" />
-             </header>
-             <textblocks>
-              <hierarchicalcodeblock tag="constructionMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Constructors" />
-               </header>
-               <textblocks/>
-              </hierarchicalcodeblock>
-              <hierarchicalcodeblock tag="accessorMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Accessor Methods" />
-               </header>
-               <textblocks>
-                <hierarchicalcodeblock tag="privStaticAccessorMethods" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-                 </header>
-                 <textblocks/>
-                </hierarchicalcodeblock>
-                <hierarchicalcodeblock tag="privRegularAccessorMethods" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-                 </header>
-                 <textblocks/>
-                </hierarchicalcodeblock>
-               </textblocks>
-              </hierarchicalcodeblock>
-              <hierarchicalcodeblock tag="operationMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Operations" />
-               </header>
-               <textblocks>
-                <codeoperation tag="operation_F77fDsxXdWAq" parent_id="F77fDsxXdWAq" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" text="sprawdza czy są dostępne pytania aby przeprowadzić test" />
-                 </header>
-                </codeoperation>
-               </textblocks>
-              </hierarchicalcodeblock>
-             </textblocks>
-            </hierarchicalcodeblock>
-           </textblocks>
-          </hierarchicalcodeblock>
-         </textblocks>
-        </cppheaderclassdeclarationblock>
        </textblocks>
       </hierarchicalcodeblock>
       <codeblockwithcomments tag="hashDefBlockEnd" text="#endif //QUIZSHOW_H" >
@@ -3740,251 +3075,6 @@
           <cppcodedocumentation tag="" writeOutText="false" />
          </header>
         </codeblockwithcomments>
-        <cppheaderclassdeclarationblock tag="classDeclarationBlock" parent_id="7vLlGLMWcZJa" canDelete="false" >
-         <header>
-          <cppcodedocumentation tag="" text="Class QuizEditor&amp;#010;" />
-         </header>
-         <textblocks>
-          <hierarchicalcodeblock tag="publicBlock" canDelete="false" >
-           <header>
-            <cppcodedocumentation tag="" text="Public stuff" />
-           </header>
-           <textblocks>
-            <hierarchicalcodeblock tag="publicFieldsDecl" indentLevel="1" canDelete="false" >
-             <header>
-              <cppcodedocumentation tag="" indentLevel="1" text="Fields" />
-             </header>
-             <textblocks/>
-            </hierarchicalcodeblock>
-            <hierarchicalcodeblock tag="pubMethodsBlock" indentLevel="1" canDelete="false" >
-             <header>
-              <cppcodedocumentation tag="" indentLevel="1" />
-             </header>
-             <textblocks>
-              <hierarchicalcodeblock tag="constructionMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Constructors" />
-               </header>
-               <textblocks>
-                <codeblockwithcomments tag="emptyconstructor" indentLevel="1" text="QuizEditor ( ) { }" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" text="Empty Constructor" />
-                 </header>
-                </codeblockwithcomments>
-               </textblocks>
-              </hierarchicalcodeblock>
-              <hierarchicalcodeblock tag="accessorMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Accessor Methods" />
-               </header>
-               <textblocks>
-                <hierarchicalcodeblock tag="pubStaticAccessorMethods" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-                 </header>
-                 <textblocks/>
-                </hierarchicalcodeblock>
-                <hierarchicalcodeblock tag="pubRegularAccessorMethods" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-                 </header>
-                 <textblocks>
-                  <codeaccessormethod tag="hblock_tag_0" accessType="0" parent_id="o50dPYYYfyEr" indentLevel="1" classfield_id="o50dPYYYfyEr" text="return questIt;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod tag="hblock_tag_1" accessType="1" parent_id="o50dPYYYfyEr" indentLevel="1" classfield_id="o50dPYYYfyEr" text="questIt = value;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod tag="hblock_tag_2" accessType="0" parent_id="0fGzMwOZ4Ktn" indentLevel="1" classfield_id="0fGzMwOZ4Ktn" text="return questions;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                  <codeaccessormethod tag="hblock_tag_3" accessType="1" parent_id="0fGzMwOZ4Ktn" indentLevel="1" classfield_id="0fGzMwOZ4Ktn" text="questions = value;" canDelete="false" >
-                   <header>
-                    <cppcodedocumentation tag="" indentLevel="1" />
-                   </header>
-                  </codeaccessormethod>
-                 </textblocks>
-                </hierarchicalcodeblock>
-               </textblocks>
-              </hierarchicalcodeblock>
-              <hierarchicalcodeblock tag="operationMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Operations" />
-               </header>
-               <textblocks>
-                <codeoperation tag="operation_bnafaH3wtJeS" parent_id="bnafaH3wtJeS" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" />
-                 </header>
-                </codeoperation>
-                <codeoperation tag="operation_wGHEMrs2UtZv" parent_id="wGHEMrs2UtZv" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" />
-                 </header>
-                </codeoperation>
-                <codeoperation tag="operation_oKXxB9PfCRSc" parent_id="oKXxB9PfCRSc" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" />
-                 </header>
-                </codeoperation>
-                <codeoperation tag="operation_UW5daY7Xucu7" parent_id="UW5daY7Xucu7" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" />
-                 </header>
-                </codeoperation>
-                <codeoperation tag="operation_cSNL0vjVVgAy" parent_id="cSNL0vjVVgAy" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" text="&amp;#010;@param filename " />
-                 </header>
-                </codeoperation>
-                <codeoperation tag="operation_dGC1rSm7QKhx" parent_id="dGC1rSm7QKhx" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" text="&amp;#010;@param filename " />
-                 </header>
-                </codeoperation>
-                <codeoperation tag="operation_WfQHo7XX4xIq" parent_id="WfQHo7XX4xIq" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" />
-                 </header>
-                </codeoperation>
-               </textblocks>
-              </hierarchicalcodeblock>
-             </textblocks>
-            </hierarchicalcodeblock>
-           </textblocks>
-          </hierarchicalcodeblock>
-          <hierarchicalcodeblock tag="protectedBlock" canDelete="false" >
-           <header>
-            <cppcodedocumentation tag="" text="Protected stuff" />
-           </header>
-           <textblocks>
-            <hierarchicalcodeblock tag="protectedFieldsDecl" indentLevel="1" canDelete="false" >
-             <header>
-              <cppcodedocumentation tag="" indentLevel="1" text="Fields" />
-             </header>
-             <textblocks/>
-            </hierarchicalcodeblock>
-            <hierarchicalcodeblock tag="protMethodsBlock" indentLevel="1" canDelete="false" >
-             <header>
-              <cppcodedocumentation tag="" indentLevel="1" />
-             </header>
-             <textblocks>
-              <hierarchicalcodeblock tag="constructionMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Constructors" />
-               </header>
-               <textblocks/>
-              </hierarchicalcodeblock>
-              <hierarchicalcodeblock tag="accessorMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Accessor Methods" />
-               </header>
-               <textblocks>
-                <hierarchicalcodeblock tag="protStaticAccessorMethods" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-                 </header>
-                 <textblocks/>
-                </hierarchicalcodeblock>
-                <hierarchicalcodeblock tag="protRegularAccessorMethods" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-                 </header>
-                 <textblocks/>
-                </hierarchicalcodeblock>
-               </textblocks>
-              </hierarchicalcodeblock>
-              <hierarchicalcodeblock tag="operationMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Operations" />
-               </header>
-               <textblocks/>
-              </hierarchicalcodeblock>
-             </textblocks>
-            </hierarchicalcodeblock>
-           </textblocks>
-          </hierarchicalcodeblock>
-          <hierarchicalcodeblock tag="privateBlock" canDelete="false" >
-           <header>
-            <cppcodedocumentation tag="" text="Private stuff" />
-           </header>
-           <textblocks>
-            <hierarchicalcodeblock tag="privateFieldsDecl" indentLevel="1" canDelete="false" >
-             <header>
-              <cppcodedocumentation tag="" indentLevel="1" text="Fields" />
-             </header>
-             <textblocks>
-              <ccfdeclarationcodeblock tag="_0" parent_id="o50dPYYYfyEr" indentLevel="1" text=" QList&lt;Quest>::iterator questIt;" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-               </header>
-              </ccfdeclarationcodeblock>
-              <ccfdeclarationcodeblock tag="tblock_0" parent_id="0fGzMwOZ4Ktn" indentLevel="1" text=" Questions questions;" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-               </header>
-              </ccfdeclarationcodeblock>
-             </textblocks>
-            </hierarchicalcodeblock>
-            <hierarchicalcodeblock tag="privMethodsBlock" indentLevel="1" canDelete="false" >
-             <header>
-              <cppcodedocumentation tag="" indentLevel="1" />
-             </header>
-             <textblocks>
-              <hierarchicalcodeblock tag="constructionMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Constructors" />
-               </header>
-               <textblocks/>
-              </hierarchicalcodeblock>
-              <hierarchicalcodeblock tag="accessorMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Accessor Methods" />
-               </header>
-               <textblocks>
-                <hierarchicalcodeblock tag="privStaticAccessorMethods" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-                 </header>
-                 <textblocks/>
-                </hierarchicalcodeblock>
-                <hierarchicalcodeblock tag="privRegularAccessorMethods" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" writeOutText="false" indentLevel="1" />
-                 </header>
-                 <textblocks/>
-                </hierarchicalcodeblock>
-               </textblocks>
-              </hierarchicalcodeblock>
-              <hierarchicalcodeblock tag="operationMethods" indentLevel="1" canDelete="false" >
-               <header>
-                <cppcodedocumentation tag="" indentLevel="1" text="Operations" />
-               </header>
-               <textblocks>
-                <codeoperation tag="operation_vkBrdSW34mQG" parent_id="vkBrdSW34mQG" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" />
-                 </header>
-                </codeoperation>
-                <codeoperation tag="operation_96TUxMWPF6Kh" parent_id="96TUxMWPF6Kh" indentLevel="1" canDelete="false" >
-                 <header>
-                  <cppcodedocumentation tag="" indentLevel="1" />
-                 </header>
-                </codeoperation>
-               </textblocks>
-              </hierarchicalcodeblock>
-             </textblocks>
-            </hierarchicalcodeblock>
-           </textblocks>
-          </hierarchicalcodeblock>
-         </textblocks>
-        </cppheaderclassdeclarationblock>
        </textblocks>
       </hierarchicalcodeblock>
       <codeblockwithcomments tag="hashDefBlockEnd" text="#endif //QUIZEDITOR_H" >

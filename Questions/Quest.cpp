@@ -1,16 +1,14 @@
 #include "Quest.h"
 
-Quest::Quest(QString pytanie, QString a, QString b, QString c, QString d, QChar poprawna, quint8 poziom)
+Quest::Quest(QString pytanie, QString a, QString b, QString c, QString d, QChar poprawna, int poziom)
     {
         question = pytanie;
-        anserwA = a;
-        anserwB = b;
-        anserwC = c;
-        anserwD = d;
+        A = a;
+        B = b;
+        C = c;
+        D = d;
         correct = poprawna;
         level = poziom;
-
-        if(!valid());// blad
     }
 
 /** Sprawdza  poprawność pytania */
@@ -18,19 +16,18 @@ bool Quest::valid()
     {
         if(question.isEmpty())
             return false;
-
-        if(anserwA.isEmpty())
+        if(A.isEmpty())
             return false;
-        if(anserwB.isEmpty())
+        if(B.isEmpty())
             return false;
-        if(anserwC.isEmpty())
+        if(C.isEmpty())
             return false;
-        if(anserwD.isEmpty())
+        if(D.isEmpty())
             return false;
 
         if(correct.isNull() || correct.isNumber())
             return false;
-        if(!level || level > 5|| level < 1)
+        if(level > 5|| level < 1) // !level to to samo co level != 0
             return false;
          if (correct != 'A' && correct != 'B' && correct != 'C' && correct != 'D' )
             return false;
