@@ -53,6 +53,12 @@ private:
     QList<Quest> makeQuiz();
     //tworzenie testowego pliku
     void createXMLforTest() ;
+    //drukuje na stdout zawartość list z Quizami
+    void printContent();
+    //string z pytaniem
+    QString questToString(Quest& q);
+    //tymczasowa metoda testująca poprawność wczytywania XML
+    void tempReader();
 
 };
 #endif //QUESTIONS_H

@@ -5,7 +5,7 @@
 Questions::Questions()
 {
     description = "Pusta";
-    filename = ""
+    filename = "";
 }
 
 Questions::Questions(QString opis, QString nazwa)
@@ -78,7 +78,6 @@ bool Questions::loadFile()
 
     while(!load.atEnd()) {
         if (load.readNext() == QXmlStreamReader::StartElement && load.name().toString() == "quest" ) {
-            load.readNext(); // przeskakuje do następnego tagu
             readQuestion(load); //przekazanie kontroli do metody wyczytującej pytania
         }
     }
@@ -89,66 +88,32 @@ bool Questions::loadFile()
 
 void Questions::readQuestion(QXmlStreamReader& load) {
     Quest q;
-    int action = 0;
-    //wyszukiwanie elemtntów w pętli
+    //wyszukiwanie elementów w pętli
     do {
-        //napis między tagami
-        if (load.isCharacters()) {
-            if (action != 0) {
-                switch (action) {
-                   case 1:
-                        q.level = load.name().toString().toInt();
-                        break;
-                   case 2:
-                        q.question = load.name().toString();
-                        break;
-                   case 3:
-                        q.A = load.name().toString();
-                        break;
-                   case 4:
-                        q.B = load.name().toString();
-                        break;
-                   case 5:
-                        q.C = load.name().toString();
-                        break;
-                   case 6:
-                        q.D = load.name().toString();
-                        break;
-                   case 7:
-                        q.correct = load.name().toString().at(0); //nie może być puste!
-                        break;
-                }
-            }
-
-        }
-        //ustawiam jaką akcję należy wykonać w zależności od tagu
-        else {
-            action = 0; //dla bezpieczeństwa
             if (load.isStartElement()) {
-                if (load.name().toString() == "level") {
-                    action = 1;
+                if (load.name() == "level") {
+                    q.level = load.readElementText().toInt();
                 }
-                else if (load.name().toString() == "question") {
-                    action = 2;
+                else if (load.name() == "question") {
+                    q.question = load.readElementText();
                 }
-                else if (load.name().toString() == "a") {
-                    action = 3;
+                else if (load.name() == "a") {
+                    q.A = load.readElementText();
                 }
-                else if (load.name().toString() == "b") {
-                    action = 4;
+                else if (load.name() == "b") {
+                    q.B = load.readElementText();
                 }
-                else if (load.name().toString() == "c") {
-                    action = 5;
+                else if (load.name() == "c") {
+                   q.C = load.readElementText();
                 }
-                else if (load.name().toString() == "d") {
-                    action = 6;
+                else if (load.name() == "d") {
+                    q.D = load.readElementText();
                 }
-                else if (load.name().toString() == "proper") {
-                    action = 7;
+                else if (load.name() == "proper") {
+                     q.correct = load.readElementText().at(0); //nie może być puste!
                 }
-                else action = 0;
+                else qDebug() << load.name();
             }
-        }
 
     } while (load.readNext() != QXmlStreamReader::EndElement && load.name().toString() != "quest");
     //jeżeli prawidłowe pytanie dodaje do odpowiedniej listy
@@ -170,6 +135,10 @@ void Questions::readQuestion(QXmlStreamReader& load) {
                 questList5.append(q);
                 break;
         }
+    }
+    else {
+        qDebug() << "Quest nieprawidłowy! Question::readQuest";
+        //qDebug() << questToString(q);
     }
 
 }
@@ -255,7 +224,15 @@ void Questions::ResetData()
 /** metoda testująca zawartość klasy - na razy drukująca w konsoli kolejne pytania */
 void Questions::test()
 {
+    qDebug() << "POCZĄTEK TESTU" ;
     createXMLforTest();
+    set_filename("testowy.xml");
+    //tempReader();
+    loadFile();
+    qDebug() << "Rozmiary: " + QString::number(questList1.length()) + "|" + QString::number(questList2.length()) + "|" + QString::number(questList3.length()) + "|" + QString::number(questList4.length()) + "|" + QString::number(questList5.length());    set_description("Quiz przetworzony w teście.");
+    set_filename("przetworzony.xml");
+    saveFile();
+    qDebug() << "KONIEC TESTU" ;
 }
 
 void Questions::createXMLforTest() {
@@ -285,6 +262,109 @@ void Questions::createXMLforTest() {
 
 }
 
+void Questions::printContent()
+{
+    QString temp;
+    qDebug() << "OPIS: ";
+    qDebug() << get_description();
+    qDebug() << "\nPytania: \n";
+    for (QList<Quest>::iterator it = questList1.begin(); it != questList1.end(); ++it) {
+        qDebug() << questToString(*it);
+    }
+    for (QList<Quest>::iterator it = questList2.begin(); it != questList2.end(); ++it) {
+        qDebug() << questToString(*it);
+    }
+    for (QList<Quest>::iterator it = questList3.begin(); it != questList3.end(); ++it) {
+        qDebug() << questToString(*it);
+    }
+    for (QList<Quest>::iterator it = questList4.begin(); it != questList4.end(); ++it) {
+        qDebug() << questToString(*it);
+    }
+    for (QList<Quest>::iterator it = questList5.begin(); it != questList5.end(); ++it) {
+        qDebug() << questToString(*it);
+    }
+}
 
 
+QString Questions::questToString(Quest& q)
+{
+    QString temp;
+    temp += "\n-------------BEGIN----------\n";
+     temp += "level: ";
+     temp += QString::number(q.level);
+     temp += "\nQuestion:  ";
+     temp += q.question;
+     temp += "\nOdp A: ";
+     temp += q.A;
+     temp += "\nOdp B: ";
+     temp += q.B;
+     temp += "\nOdp C: ";
+     temp += q.C;
+     temp += "\nOdp D: ";
+     temp += q.D;
+     temp += "\nPoprawna odpowiedź to: ";
+     temp += q.correct;
+     temp += "\n----------END-------------\n";
+     return temp;
+}
 
+void Questions::tempReader()
+{
+    //qDebug() << "tempReader początek";
+    if (filename.isEmpty()) {
+        qDebug() << "NIEPRAWIDŁOWA NAZWA PLIKU";
+        return;
+    }
+
+    QFile File(filename);
+    if (!File.open(QIODevice::ReadOnly)) {
+        qDebug() << "NIE MOŻNA OTWORZYĆ PLIKU";
+        return;
+    }
+    //qDebug() << "Nazwa pliku: " + File.fileName();
+    QXmlStreamReader load(&File);
+
+    while(!load.atEnd()) {
+        qDebug() << "Początek pętli while";
+        load.readNext();
+        if ( load.isStartElement() && load.name() == "quest" ) {
+            //load.readNext(); // przeskakuje do następnego tagu
+            //readQuestion(load); //przekazanie kontroli do metody wyczytującej pytania
+            qDebug() << load.name().toString();
+
+            //wyszukiwanie elementów w pętli
+            do {
+                //napis między tagami
+                if (load.isStartElement()) {
+                    if (load.name() == "level") {
+                        qDebug() <<  load.readElementText();
+                    }
+                    else if (load.name() == "question") {
+                        qDebug() <<  load.readElementText();
+                    }
+                    else if (load.name() == "a") {
+                        qDebug() <<  load.readElementText();
+                    }
+                    else if (load.name() == "b") {
+                        qDebug() <<  load.readElementText();
+                    }
+                    else if (load.name() == "c") {
+                        qDebug() <<  load.readElementText();
+                    }
+                    else if (load.name() == "d") {
+                        qDebug() <<  load.readElementText();
+                    }
+                    else if (load.name() == "proper") {
+                        qDebug() <<  load.readElementText();
+                    }
+                    else
+                    {
+                        qDebug() <<  "NIEZNANY ELEMENT STARTOWY";
+                    }
+                }
+
+
+            } while (load.readNext() != QXmlStreamReader::EndElement && load.name().toString() != "quest");
+        }
+    }
+}
