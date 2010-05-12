@@ -3,8 +3,8 @@ milionaire
 ZMIANY:
 nazwy w Quest answerA na A itd
 sygnatury metod loadFile i saveFile
+klasa Question wstępnie przetestowana
 
 TODO:
-metoda test()
-testowanie klasy
+
 

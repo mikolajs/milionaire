@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="main" >
+    <file>w32.xpfrag.800x600.jpg</file>
+  </qresource>
+</RCC>
