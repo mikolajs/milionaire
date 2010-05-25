@@ -1,20 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>QuizEdit</class>
- <widget class="QWidget" name="QuizEdit" >
-  <property name="geometry" >
+ <widget class="QWidget" name="QuizEdit">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>400</height>
+    <width>782</width>
+    <height>536</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>QuizEdit</string>
   </property>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>481</width>
+     <height>291</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbutton_dodaj">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>370</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dodaj pytanie</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbutton_edytuj">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>370</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edytuj pytanie</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbutton_usun">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>400</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Usuń pytanie</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbutton_nowyTest">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Stwórz nowy test</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbutton_zapisz">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>10</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Zapisz zmiany</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbutton_zapiszJako">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>10</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Zapisz jako nowy test</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbutton_wczytaj">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>10</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Otwórz istniejący test</string>
+   </property>
+  </widget>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
+ <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections/>
 </ui>
