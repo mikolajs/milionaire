@@ -6,61 +6,25 @@ Questions::Questions()
 {
     description = "Pusta";
     filename = "";
+    questLists.resize(5); //ustawiam rozmiar vectora
 }
 
 Questions::Questions(QString opis, QString nazwa)
 {
     description = opis;
     filename = nazwa;
+    questLists.resize(5); //ustawiam rozmiar vectora
 }
 
 void Questions::addQuest(Quest quest)
 {
     if (!quest.valid())
         return;
+    int level = quest.level - 1;
+    Q_ASSERT(level < 5 && level >= 0);
+    questLists[quest.level - 1].push_back(quest);
 
-    quint8 quest_level = quest.level;
-
-    switch (quest_level)
-    {
-    case 1: questList1.push_back(quest); break;
-    case 2: questList2.push_back(quest); break;
-    case 3: questList3.push_back(quest); break;
-    case 4: questList4.push_back(quest); break;
-    case 5: questList5.push_back(quest); break;
-    }
 }
-
-//te metody przenieść do klas okienek
-QList<Quest> Questions::makeQuiz()
-{
-    QList<Quest> pytania; // przygotowujemy zmienna na wylosowane pytania
-
-    // losujemy pytanie z poziomu 1, 2, 3 itd.
-    pytania.push_back(GetRandomQuest(questList1));
-    pytania.push_back(GetRandomQuest(questList2));
-    pytania.push_back(GetRandomQuest(questList3));
-    pytania.push_back(GetRandomQuest(questList4));
-    pytania.push_back(GetRandomQuest(questList5));
-
-    return pytania;
-}
-//tę metodę przenieść do klas okienek
-Quest Questions::GetRandomQuest(QList<Quest> questsList)
-{
-    if (questsList.empty())
-        return Quest();
-
-    QList<Quest>::const_iterator i = questsList.begin();
-    qint32 random = rand()%questsList.size();
-    i+=random;
-
-    if (i!=questsList.end())
-        return (*i);
-    else
-        return (*questsList.end());
-}
-
 
 
 bool Questions::loadFile()
@@ -81,7 +45,6 @@ bool Questions::loadFile()
             readQuestion(load); //przekazanie kontroli do metody wyczytującej pytania
         }
     }
-
 
     return true;
 }
@@ -112,29 +75,15 @@ void Questions::readQuestion(QXmlStreamReader& load) {
                 else if (load.name() == "proper") {
                      q.correct = load.readElementText().at(0); //nie może być puste!
                 }
-                else qDebug() << load.name();
+                else {
+                    //qDebug() << load.name();
+                }
             }
 
     } while (load.readNext() != QXmlStreamReader::EndElement && load.name().toString() != "quest");
     //jeżeli prawidłowe pytanie dodaje do odpowiedniej listy
     if (q.valid()) {
-        switch (q.level) {
-            case 1:
-                questList1.append(q);
-                break;
-            case 2:
-                questList2.append(q);
-                break;
-            case 3:
-                questList3.append(q);
-                break;
-            case 4:
-                questList4.append(q);
-                break;
-            case 5:
-                questList5.append(q);
-                break;
-        }
+        addQuest(q);
     }
     else {
         qDebug() << "Quest nieprawidłowy! Question::readQuest";
@@ -160,12 +109,8 @@ bool Questions::saveFile()
     save.writeStartElement("description");
     save.writeCharacters(description);
     save.writeEndElement();
-
-    writeQuestList(questList1,save);
-    writeQuestList(questList2,save);
-    writeQuestList(questList3,save);
-    writeQuestList(questList4,save);
-    writeQuestList(questList5,save);
+    for (QVector<QList<Quest> >::iterator it = questLists.begin(); it != questLists.end(); ++it)
+         writeQuestList(*it,save);
 
 
     save.writeEndDocument(); //zamyka root i dodaje pustą linię
@@ -213,12 +158,8 @@ void Questions::writeQuestList(QList<Quest>& questList, QXmlStreamWriter& save)
 void Questions::ResetData()
     {
         description.clear();
-        //filename.clear();
-        questList1.clear();
-        questList2.clear();
-        questList3.clear();
-        questList4.clear();
-        questList5.clear();
+        for (QVector<QList<Quest> >::iterator it = questLists.begin(); it != questLists.end(); ++it)
+         (*it).clear();
     }
 ////////////////////////////////////////TESTY/////////////////////////////////////////////
 /** metoda testująca zawartość klasy - na razy drukująca w konsoli kolejne pytania */
@@ -229,7 +170,10 @@ void Questions::test()
     set_filename("testowy.xml");
     //tempReader();
     loadFile();
-    qDebug() << "Rozmiary: " + QString::number(questList1.length()) + "|" + QString::number(questList2.length()) + "|" + QString::number(questList3.length()) + "|" + QString::number(questList4.length()) + "|" + QString::number(questList5.length());    set_description("Quiz przetworzony w teście.");
+    qDebug() << "Rozmiary list z pytaniami: ";
+    for (QVector<QList<Quest> >::iterator it = questLists.begin(); it != questLists.end(); ++it)
+         qDebug() <<  QString::number((*it).length());
+    set_description("Quiz przetworzony w teście.");
     set_filename("przetworzony.xml");
     saveFile();
     qDebug() << "KONIEC TESTU" ;
@@ -268,20 +212,9 @@ void Questions::printContent()
     qDebug() << "OPIS: ";
     qDebug() << get_description();
     qDebug() << "\nPytania: \n";
-    for (QList<Quest>::iterator it = questList1.begin(); it != questList1.end(); ++it) {
-        qDebug() << questToString(*it);
-    }
-    for (QList<Quest>::iterator it = questList2.begin(); it != questList2.end(); ++it) {
-        qDebug() << questToString(*it);
-    }
-    for (QList<Quest>::iterator it = questList3.begin(); it != questList3.end(); ++it) {
-        qDebug() << questToString(*it);
-    }
-    for (QList<Quest>::iterator it = questList4.begin(); it != questList4.end(); ++it) {
-        qDebug() << questToString(*it);
-    }
-    for (QList<Quest>::iterator it = questList5.begin(); it != questList5.end(); ++it) {
-        qDebug() << questToString(*it);
+    for (QVector<QList<Quest> >::iterator  iter = questLists.begin(); iter != questLists.end(); ++iter)
+        for (QList<Quest>::iterator it = (*iter).begin(); it != (*iter).end(); ++it) {
+            qDebug() << questToString(*it);
     }
 }
 

@@ -3,6 +3,9 @@
 
 #include "Quest.h"
 #include <QtCore>
+
+#define MAX_QUEST_LIST 5
+
 class QXmlStreamReader;
 class QXmlStreamWriter;
 
