@@ -9,6 +9,8 @@ public:
     QuestionShow();
     Quest getQuest(int level);
     bool checkCanPerformQuiz();
+
+    QString test(int size);
 private:
     //dostarcza losową liczbę z zakresu 0-range
     int getRand(int range);

@@ -6,14 +6,14 @@ Questions::Questions()
 {
     description = "Pusta";
     filename = "";
-    questLists.resize(5); //ustawiam rozmiar vectora
+    questLists.resize(MAX_QUEST_LIST); //ustawiam rozmiar vectora
 }
 
 Questions::Questions(QString opis, QString nazwa)
 {
     description = opis;
     filename = nazwa;
-    questLists.resize(5); //ustawiam rozmiar vectora
+    questLists.resize(MAX_QUEST_LIST); //ustawiam rozmiar vectora
 }
 
 void Questions::addQuest(Quest quest)
@@ -21,7 +21,7 @@ void Questions::addQuest(Quest quest)
     if (!quest.valid())
         return;
     int level = quest.level - 1;
-    Q_ASSERT(level < 5 && level >= 0);
+    Q_ASSERT(level < MAX_QUEST_LIST && level >= 0);
     questLists[quest.level - 1].push_back(quest);
 
 }

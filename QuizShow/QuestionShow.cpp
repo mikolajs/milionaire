@@ -4,8 +4,8 @@
 
 QuestionShow::QuestionShow()
 {
-//set fullscreen
 
+    std::srand(std::time(NULL));
     //sprawdź możliwość wykonania pełnej gry
 
     //rozpocznij grę lub wyświetl komunikat o błędzie
@@ -17,8 +17,8 @@ Quest QuestionShow::getQuest(int level)
 {
     Q_ASSERT(level < 6 && level > 0);
     int randNum = getRand(questLists[level -1].length());
-    Q_ASSERT(questLists[level].length() < randNum); //random ma dać mniejszą liczbę niż rozmiar listy
-    return questLists[level].takeAt(randNum); //kasuje zwracany Quest z listy
+    Q_ASSERT(questLists[level-1].length() > randNum); //random ma dać mniejszą liczbę niż rozmiar listy
+    return questLists[level-1].takeAt(randNum); //kasuje zwracany Quest z listy
 }
 
 bool QuestionShow::checkCanPerformQuiz()
@@ -31,6 +31,20 @@ bool QuestionShow::checkCanPerformQuiz()
 
 int QuestionShow::getRand(int range)
 {
-    std::srand(std::time(NULL));
-    return int(double(range) * (double(std::rand()) / RAND_MAX)) ;
+
+    return int(double(range) * (double(std::rand()) /double( RAND_MAX) )) ;
 }
+
+QString QuestionShow::test(int size)
+{
+    QString tmp = "\nLiczby losowe dla rozmiaru listy ";
+    tmp += QString::number(size);
+    tmp += ": ";
+
+    for (int i = 0; i < 10; i++){
+        tmp += QString::number(getRand(size));
+        tmp += ", ";
+    }
+    return tmp;
+}
+

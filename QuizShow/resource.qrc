@@ -1,5 +1,7 @@
 <RCC>
-  <qresource prefix="main" >
-    <file>w32.xpfrag.800x600.jpg</file>
-  </qresource>
+    <qresource prefix="/main">
+        <file>images/backgroundAnswerButton.png</file>
+        <file>images/bigbackground.png</file>
+        <file>images/backgroundAnswerButtonB.png</file>
+    </qresource>
 </RCC>
