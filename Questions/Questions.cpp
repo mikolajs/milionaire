@@ -24,8 +24,31 @@ void Questions::addQuest(Quest quest)
     Q_ASSERT(level < MAX_QUEST_LIST && level >= 0);
     questLists[quest.level - 1].push_back(quest);
 
+<<<<<<< HEAD
 }
 
+=======
+    quint8 quest_level = quest.level;
+    questLists[quest_level].push_back(quest);
+}
+
+//te metody przenieść do klas okienek
+QList<Quest> Questions::makeQuiz()
+{
+    /*QList<Quest> pytania; // przygotowujemy zmienna na wylosowane pytania
+
+    // losujemy pytanie z poziomu 1, 2, 3 itd.
+    pytania.push_back(GetRandomQuest(questList1));
+    pytania.push_back(GetRandomQuest(questList2));
+    pytania.push_back(GetRandomQuest(questList3));
+    pytania.push_back(GetRandomQuest(questList4));
+    pytania.push_back(GetRandomQuest(questList5));*/
+
+    QList<Quest> puste;
+    return puste;
+}
+
+>>>>>>> origin/master
 
 bool Questions::loadFile()
 {
@@ -83,7 +106,11 @@ void Questions::readQuestion(QXmlStreamReader& load) {
     } while (load.readNext() != QXmlStreamReader::EndElement && load.name().toString() != "quest");
     //jeżeli prawidłowe pytanie dodaje do odpowiedniej listy
     if (q.valid()) {
+<<<<<<< HEAD
         addQuest(q);
+=======
+        questLists[q.level].append(q);
+>>>>>>> origin/master
     }
     else {
         qDebug() << "Quest nieprawidłowy! Question::readQuest";
@@ -109,9 +136,15 @@ bool Questions::saveFile()
     save.writeStartElement("description");
     save.writeCharacters(description);
     save.writeEndElement();
+<<<<<<< HEAD
     for (QVector<QList<Quest> >::iterator it = questLists.begin(); it != questLists.end(); ++it)
          writeQuestList(*it,save);
 
+=======
+
+    for(int i=0; i<MAX_QUEST_LIST; ++i)
+        writeQuestList(questLists[i], save);
+>>>>>>> origin/master
 
     save.writeEndDocument(); //zamyka root i dodaje pustą linię
     return true;
@@ -158,12 +191,17 @@ void Questions::writeQuestList(QList<Quest>& questList, QXmlStreamWriter& save)
 void Questions::ResetData()
     {
         description.clear();
+<<<<<<< HEAD
         for (QVector<QList<Quest> >::iterator it = questLists.begin(); it != questLists.end(); ++it)
          (*it).clear();
+=======
+        //filename.clear();
+        questLists.clear();
+>>>>>>> origin/master
     }
 ////////////////////////////////////////TESTY/////////////////////////////////////////////
 /** metoda testująca zawartość klasy - na razy drukująca w konsoli kolejne pytania */
-void Questions::test()
+/*void Questions::test()
 {
     qDebug() << "POCZĄTEK TESTU" ;
     createXMLforTest();
@@ -300,4 +338,4 @@ void Questions::tempReader()
             } while (load.readNext() != QXmlStreamReader::EndElement && load.name().toString() != "quest");
         }
     }
-}
+}*/
