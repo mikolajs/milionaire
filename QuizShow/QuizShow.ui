@@ -172,8 +172,12 @@
     </property>
     <property name="font">
      <font>
+      <family>Comic Sans MS</family>
       <pointsize>12</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 250, 249);</string>
     </property>
     <property name="text">
      <string>Kliknij aby rozpocząć grę</string>
@@ -193,8 +197,18 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Comic Sans MS</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 250, 249);
+background-color: rgb(11, 1, 83);</string>
     </property>
     <property name="autoScrollMargin">
      <number>14</number>
@@ -298,11 +312,15 @@
     </property>
     <property name="font">
      <font>
+      <family>Comic Sans MS</family>
       <pointsize>14</pointsize>
      </font>
     </property>
     <property name="autoFillBackground">
      <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 250, 249);</string>
     </property>
     <property name="text">
      <string>Treść pytania</string>
@@ -342,11 +360,13 @@
          </property>
          <property name="font">
           <font>
+           <family>Comic Sans MS</family>
            <pointsize>12</pointsize>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-image: url(:/main/images/backgroundAnswerButton.png);</string>
+          <string notr="true">background-image: url(:/main/images/backgroundAnswerButtonB.png);
+color: rgb(255, 250, 249);</string>
          </property>
          <property name="text">
           <string>odpA</string>
@@ -375,11 +395,13 @@
          </property>
          <property name="font">
           <font>
+           <family>Comic Sans MS</family>
            <pointsize>12</pointsize>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-image: url(:/main/images/backgroundAnswerButton.png);</string>
+          <string notr="true">background-image: url(:/main/images/backgroundAnswerButtonB.png);
+color: rgb(255, 250, 249);</string>
          </property>
          <property name="text">
           <string>odpB</string>
@@ -425,6 +447,7 @@
          </property>
          <property name="font">
           <font>
+           <family>Comic Sans MS</family>
            <pointsize>12</pointsize>
           </font>
          </property>
@@ -432,7 +455,8 @@
           <bool>false</bool>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-image: url(:/main/images/backgroundAnswerButton.png);</string>
+          <string notr="true">background-image: url(:/main/images/backgroundAnswerButtonB.png);
+color: rgb(255, 250, 249);</string>
          </property>
          <property name="text">
           <string>odpC</string>
@@ -461,11 +485,13 @@
          </property>
          <property name="font">
           <font>
+           <family>Comic Sans MS</family>
            <pointsize>12</pointsize>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-image: url(:/main/images/backgroundAnswerButton.png);</string>
+          <string notr="true">background-image: url(:/main/images/backgroundAnswerButtonB.png);
+color: rgb(255, 250, 249);</string>
          </property>
          <property name="text">
           <string>odpD</string>

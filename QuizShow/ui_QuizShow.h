@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'QuizShow.ui'
 **
-** Created: Tue Jun 8 20:39:26 2010
+** Created: Thu Jun 10 22:41:02 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -114,7 +114,11 @@ public:
         button_next->setObjectName(QString::fromUtf8("button_next"));
         button_next->setEnabled(true);
         button_next->setGeometry(QRect(250, 250, 221, 31));
-        button_next->setFont(font);
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Comic Sans MS"));
+        font1.setPointSize(12);
+        button_next->setFont(font1);
+        button_next->setStyleSheet(QString::fromUtf8("color: rgb(255, 250, 249);"));
         button_next->setFlat(true);
         listWidget = new QListWidget(frame);
         new QListWidgetItem(listWidget);
@@ -134,7 +138,15 @@ public:
         new QListWidgetItem(listWidget);
         listWidget->setObjectName(QString::fromUtf8("listWidget"));
         listWidget->setGeometry(QRect(590, 10, 181, 301));
-        listWidget->setFont(font);
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("Comic Sans MS"));
+        font2.setPointSize(10);
+        font2.setBold(true);
+        font2.setWeight(75);
+        listWidget->setFont(font2);
+        listWidget->setAutoFillBackground(true);
+        listWidget->setStyleSheet(QString::fromUtf8("color: rgb(255, 250, 249);\n"
+"background-color: rgb(11, 1, 83);"));
         listWidget->setAutoScrollMargin(14);
         listWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
         listWidget->setProperty("showDropIndicator", QVariant(false));
@@ -142,10 +154,12 @@ public:
         labelQ = new QLabel(frame);
         labelQ->setObjectName(QString::fromUtf8("labelQ"));
         labelQ->setGeometry(QRect(30, 330, 741, 131));
-        QFont font1;
-        font1.setPointSize(14);
-        labelQ->setFont(font1);
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("Comic Sans MS"));
+        font3.setPointSize(14);
+        labelQ->setFont(font3);
         labelQ->setAutoFillBackground(false);
+        labelQ->setStyleSheet(QString::fromUtf8("color: rgb(255, 250, 249);"));
         labelQ->setAlignment(Qt::AlignCenter);
         horizontalLayoutWidget_5 = new QWidget(frame);
         horizontalLayoutWidget_5->setObjectName(QString::fromUtf8("horizontalLayoutWidget_5"));
@@ -163,8 +177,9 @@ public:
         button_answA->setEnabled(true);
         button_answA->setMinimumSize(QSize(332, 40));
         button_answA->setMaximumSize(QSize(332, 40));
-        button_answA->setFont(font);
-        button_answA->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButton.png);"));
+        button_answA->setFont(font1);
+        button_answA->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButtonB.png);\n"
+"color: rgb(255, 250, 249);"));
         button_answA->setFlat(true);
 
         verticalLayout->addWidget(button_answA);
@@ -174,8 +189,9 @@ public:
         button_answB->setEnabled(true);
         button_answB->setMinimumSize(QSize(332, 40));
         button_answB->setMaximumSize(QSize(332, 40));
-        button_answB->setFont(font);
-        button_answB->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButton.png);"));
+        button_answB->setFont(font1);
+        button_answB->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButtonB.png);\n"
+"color: rgb(255, 250, 249);"));
         button_answB->setFlat(true);
 
         verticalLayout->addWidget(button_answB);
@@ -195,9 +211,10 @@ public:
         button_answC->setEnabled(true);
         button_answC->setMinimumSize(QSize(332, 40));
         button_answC->setMaximumSize(QSize(332, 40));
-        button_answC->setFont(font);
+        button_answC->setFont(font1);
         button_answC->setAutoFillBackground(false);
-        button_answC->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButton.png);"));
+        button_answC->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButtonB.png);\n"
+"color: rgb(255, 250, 249);"));
         button_answC->setFlat(true);
 
         verticalLayout_2->addWidget(button_answC);
@@ -207,8 +224,9 @@ public:
         button_answD->setEnabled(true);
         button_answD->setMinimumSize(QSize(332, 40));
         button_answD->setMaximumSize(QSize(332, 40));
-        button_answD->setFont(font);
-        button_answD->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButton.png);"));
+        button_answD->setFont(font1);
+        button_answD->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButtonB.png);\n"
+"color: rgb(255, 250, 249);"));
         button_answD->setFlat(true);
 
         verticalLayout_2->addWidget(button_answD);

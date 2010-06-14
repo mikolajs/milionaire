@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'QuizShow.h'
 **
-** Created: Tue Jun 8 21:59:31 2010
+** Created: Mon Jun 14 22:43:43 2010
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.2)
 **
 ** WARNING! All changes made in this file will be lost!

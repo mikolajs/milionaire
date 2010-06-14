@@ -41,7 +41,9 @@ public slots:
 
 private:
     Ui::QuizShow *ui;
+    //kontener z pytaniami
     QuestionShow questions;
+    //aktualnie wylosowane pytanie
     Quest quest;
     //wybrana odpowiedź
     QChar selectedAnswer;

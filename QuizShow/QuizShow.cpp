@@ -5,6 +5,7 @@ QuizShow::QuizShow(QString path, QWidget *parent)
     : QWidget(parent), ui(new Ui::QuizShow)
 {
 
+    QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
     ui->setupUi(this);
 
     selectedAnswer = 'N';
@@ -52,10 +53,18 @@ void QuizShow::selectAnswerD()
 
 void QuizShow::resignAction()
 {
+    //dodać obsługę wartości gwarantowanej!!!
     if (actualQuestion > 0) {
-        QListWidgetItem* item = ui->listWidget->currentItem();
-        QString wonSumString = item->text().right(4).trimmed();
-        ui->labelQ->setText("Koniec gry! \n Gratuluje wygrałeś " + wonSumString + "!");
+        int row = ui->listWidget->currentRow();
+        if (row < 15) {
+            row++;
+            QListWidgetItem* item = ui->listWidget->item(row);
+            QString wonSumString = item->text().right(4).trimmed();
+            ui->labelQ->setText("Koniec gry! \n Gratuluje wygrałeś " + wonSumString + "!");
+        }
+        else {
+            ui->labelQ->setText("Niestety nie wygrałeś!");
+        }
         actualQuestion = 0;
         showQuestion();
     }
@@ -63,7 +72,40 @@ void QuizShow::resignAction()
 
 void QuizShow::fifty_fiftyAction()
 {
-    //zaznaczenie pół na pół
+    int notProper[2];
+    int i = 0;
+    int random;
+    //pobieram prawidłową odpowiedź 65 to wartość A w ascii
+    int correct = int(quest.correct.toAscii()) - 65;
+    Q_ASSERT(correct >= 0 || correct <= 3);
+
+    while( i < 2) {
+       random = questions.getRand(4);
+       if (random != correct) {
+           notProper[i] = random;
+           i++;
+       }
+    }
+    
+    for (int j = 0; j < 2; j++) {
+        switch (notProper[j]) {
+        case 0:
+            ui->button_answA->hide();
+            break;
+        case 1:
+            ui->button_answB->hide();
+            break;
+        case 2:
+            ui->button_answC->hide();
+            break;
+        case 3:
+            ui->button_answD->hide();
+            break;
+        }
+    }
+    //wyłączenie
+    ui->button_fifty_fifty->hide();
+
 }
 
 void QuizShow::publicAction()
@@ -79,22 +121,22 @@ void QuizShow::phoneAction()
 void QuizShow::makeSelectAnswer()
 {
     //podmieniania obrazków pod button_answX
-    ui->button_answA->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButtonB.png);"));
-    ui->button_answB->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButtonB.png);"));
-    ui->button_answC->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButtonB.png);"));
-    ui->button_answD->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButtonB.png);"));
+    ui->button_answA->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButtonB.png);color:white;"));
+    ui->button_answB->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButtonB.png);color:white;"));
+    ui->button_answC->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButtonB.png);color:white;"));
+    ui->button_answD->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButtonB.png);color:white;"));
     switch (selectedAnswer.toAscii()) {
     case 'A':
-        ui->button_answA->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButton.png);"));
+        ui->button_answA->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButton.png);color:white;"));
         break;
     case 'B':
-        ui->button_answB->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButton.png);"));
+        ui->button_answB->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButton.png);color:white;"));
         break;
     case 'C':
-        ui->button_answC->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButton.png);"));
+        ui->button_answC->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButton.png);color:white;"));
         break;
     case 'D':
-        ui->button_answD->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButton.png);"));
+        ui->button_answD->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButton.png);color:white;"));
         break;
     }
 }
@@ -104,12 +146,18 @@ void QuizShow::nextQuestion()
    Q_ASSERT(actualQuestion < 16);
 
    if (actualQuestion == 0) {
+       //przywrócone koła ratunkowe
+       if (ui->button_fifty_fifty->isHidden()) ui->button_fifty_fifty->show();
+       if (ui->button_phone->isHidden()) ui->button_phone->show();
+       if (ui->button_public->isHidden()) ui->button_public->show();
+
        if (!questions.checkCanPerformQuiz()) {
            ui->labelQ->setText("Za mało pytań, musi być ich \n co najmniej po 3 na każdy z pięciu poziomów! ");
            return;
        }
        else {
-           ui->listWidget->setCurrentRow(15,QItemSelectionModel::Deselect);
+
+           ui->listWidget->setCurrentRow(15,QItemSelectionModel::SelectCurrent);
        }
    }
 
@@ -139,6 +187,10 @@ void QuizShow::showQuestion()
 {
     //usuwam wybraną odpowiedź
 
+    if (ui->button_answA->isHidden()) ui->button_answA->show();
+    if (ui->button_answB->isHidden()) ui->button_answB->show();
+    if (ui->button_answC->isHidden()) ui->button_answC->show();
+    if (ui->button_answD->isHidden()) ui->button_answD->show();
 
     if (actualQuestion == 0) {
         //ui->labelQ->setText("Naciśnij przycisk, aby rozpocząć grę");
@@ -148,8 +200,8 @@ void QuizShow::showQuestion()
     else {
         selectedAnswer = 'N';
         makeSelectAnswer();
-        ui->labelQ->setText("Zatwierdź odpowiedź");
-        ui->button_next->setText(quest.question);
+        ui->labelQ->setText(quest.question);
+        ui->button_next->setText("Zatwierdź odpowiedź");
         ui->button_answA->setText(quest.A);
         ui->button_answB->setText(quest.B);
         ui->button_answC->setText(quest.C);
