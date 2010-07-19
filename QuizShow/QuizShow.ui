@@ -13,11 +13,20 @@
   <property name="palette">
    <palette>
     <active>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>70</red>
+        <green>82</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
-        <green>255</green>
+        <red>70</red>
+        <green>82</green>
         <blue>255</blue>
        </color>
       </brush>
@@ -25,19 +34,28 @@
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>0</green>
-        <blue>192</blue>
+        <red>70</red>
+        <green>82</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
     </active>
     <inactive>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>70</red>
+        <green>82</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
-        <green>255</green>
+        <red>70</red>
+        <green>82</green>
         <blue>255</blue>
        </color>
       </brush>
@@ -45,29 +63,38 @@
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>0</green>
-        <blue>192</blue>
+        <red>70</red>
+        <green>82</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
     </inactive>
     <disabled>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>70</red>
+        <green>82</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>0</green>
-        <blue>192</blue>
+        <red>70</red>
+        <green>82</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>0</red>
-        <green>0</green>
-        <blue>192</blue>
+        <red>70</red>
+        <green>82</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
@@ -81,7 +108,7 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-image: url(:/main/images/bigbackground.png);</string>
+   <string notr="true">background-color:rgb(70, 82, 255);</string>
   </property>
   <widget class="QFrame" name="frame">
    <property name="geometry">
@@ -93,7 +120,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url(:/main/images/bigbackground.png);</string>
+    <string notr="true"/>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -118,6 +145,9 @@
          <pointsize>12</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url();</string>
+       </property>
        <property name="text">
         <string>R</string>
        </property>
@@ -128,6 +158,9 @@
      </item>
      <item>
       <widget class="QPushButton" name="button_fifty_fifty">
+       <property name="styleSheet">
+        <string notr="true">background-image: url();</string>
+       </property>
        <property name="text">
         <string>1/2</string>
        </property>
@@ -138,6 +171,9 @@
      </item>
      <item>
       <widget class="QPushButton" name="button_phone">
+       <property name="styleSheet">
+        <string notr="true">background-image: url();</string>
+       </property>
        <property name="text">
         <string>T</string>
        </property>
@@ -148,6 +184,9 @@
      </item>
      <item>
       <widget class="QPushButton" name="button_public">
+       <property name="styleSheet">
+        <string notr="true">background-image: url();</string>
+       </property>
        <property name="text">
         <string>P</string>
        </property>
@@ -176,8 +215,13 @@
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 250, 249);</string>
+     <string notr="true">background-color: rgb(0, 0, 128);
+color: rgb(255, 250, 249);
+background-image: url();</string>
     </property>
     <property name="text">
      <string>Kliknij aby rozpocząć grę</string>
@@ -208,7 +252,8 @@
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 250, 249);
-background-color: rgb(11, 1, 83);</string>
+background-color: rgb(0, 0, 128);
+background-image: url();</string>
     </property>
     <property name="autoScrollMargin">
      <number>14</number>
@@ -320,7 +365,10 @@ background-color: rgb(11, 1, 83);</string>
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 250, 249);</string>
+     <string notr="true">background-color: rgb(0, 0, 128);
+color: rgb(255, 250, 249);
+background-image: url();
+border-radius: 20px;</string>
     </property>
     <property name="text">
      <string>Treść pytania</string>
@@ -364,9 +412,17 @@ background-color: rgb(11, 1, 83);</string>
            <pointsize>12</pointsize>
           </font>
          </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
          <property name="styleSheet">
-          <string notr="true">background-image: url(:/main/images/backgroundAnswerButtonB.png);
-color: rgb(255, 250, 249);</string>
+          <string notr="true">background-color: rgb(0, 0, 128);
+background-image: url();
+color: rgb(255, 250, 249);
+border-radius: 10px;</string>
+         </property>
+         <property name="inputMethodHints">
+          <set>Qt::ImhNone</set>
          </property>
          <property name="text">
           <string>odpA</string>
@@ -399,9 +455,14 @@ color: rgb(255, 250, 249);</string>
            <pointsize>12</pointsize>
           </font>
          </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
          <property name="styleSheet">
-          <string notr="true">background-image: url(:/main/images/backgroundAnswerButtonB.png);
-color: rgb(255, 250, 249);</string>
+          <string notr="true">background-color: rgb(0, 0, 128);
+color: rgb(255, 250, 249);
+border-radius: 10px;
+background-image: url();</string>
          </property>
          <property name="text">
           <string>odpB</string>
@@ -455,8 +516,10 @@ color: rgb(255, 250, 249);</string>
           <bool>false</bool>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-image: url(:/main/images/backgroundAnswerButtonB.png);
-color: rgb(255, 250, 249);</string>
+          <string notr="true">background-color:rgb(0, 0, 128);
+color: rgb(255, 250, 249);
+border-radius: 10px;
+background-image: url();</string>
          </property>
          <property name="text">
           <string>odpC</string>
@@ -489,12 +552,20 @@ color: rgb(255, 250, 249);</string>
            <pointsize>12</pointsize>
           </font>
          </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
          <property name="styleSheet">
-          <string notr="true">background-image: url(:/main/images/backgroundAnswerButtonB.png);
-color: rgb(255, 250, 249);</string>
+          <string notr="true">background-color:rgb(0, 0, 128);
+color: rgb(255, 250, 249);
+border-radius: 10px;
+background-image: url();</string>
          </property>
          <property name="text">
           <string>odpD</string>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
          </property>
          <property name="flat">
           <bool>true</bool>
@@ -513,6 +584,9 @@ color: rgb(255, 250, 249);</string>
       <width>421</width>
       <height>211</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url();</string>
     </property>
     <property name="text">
      <string>TextLabel</string>

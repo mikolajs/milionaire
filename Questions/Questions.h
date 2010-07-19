@@ -1,8 +1,6 @@
 #ifndef QUESTIONS_H
 #define QUESTIONS_H
 
-#define MAX_QUEST_LIST  5
-
 #include "Quest.h"
 #include <QtCore>
 

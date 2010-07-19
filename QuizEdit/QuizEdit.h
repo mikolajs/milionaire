@@ -3,7 +3,6 @@
 
 #include <QtGui/QWidget>
 #include "../Questions/Questions.h"
-#include "questeditor.h"
 
 namespace Ui
 {
@@ -21,20 +20,34 @@ public:
 private:
     Ui::QuizEdit *ui;
     Questions* m_questions;
-    void OdswiezWidok();
-    bool LoadTest(QString filename);
-    bool SaveTest(QString filename);
+    //odswieża widok (listy, opisu i ścieżki) po załadowaniu pliku
+    void refreshView();
+    bool loadQuiz();
+    bool saveQuiz();
 
 public slots:
-    void Window_NowyTest();
-    void Window_EdytujPytania(Quest& pytania);
-    void Window_NowePytania();
+    //tworzy nowy test w pliku i ładuje jego widok
+    void createTestFileNew();
+// ładuje istniejący test
+    void loadTestFile();
+    //zapisuje jako ...
+    void saveTestFileNew();
+    //zapis akutalnego testu
+    void saveTestFileOld();
+    //wyświetl następne pytanie
+    void nextQuest();
+    //wyświetl poprzednie pytanie
+    void previousQuest();
 
-    void LoadTestFile();
-    void SaveTestFileNew();
-    void SaveTestFileOld();
-
-    void Odswiez();
+    //dodaje nowe pytanie
+    void addNewQuest();
+    //zmienia istniejące pytanie
+    void alterQuest();
+    //usuwa wybrany test
+    void deleteQuest();
+    //??void refresh();
+    //wybiera test po kliknięciu go na liście
+    void questClicked(int row);
 };
 
 #endif // QUIZEDIT_H

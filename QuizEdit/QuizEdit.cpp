@@ -1,23 +1,27 @@
 #include <QFileDialog>
+#include <QMessageBox>
 
 #include "QuizEdit.h"
 #include "ui_QuizEdit.h"
 #include "../Questions/Questions.h"
 #include "../Questions/Quest.h"
-#include "questeditor.h"
+
 
 QuizEdit::QuizEdit(QWidget *parent) : QWidget(parent), ui(new Ui::QuizEdit)
 {
+    m_questions = 0; //zeruje wskaźnik
     ui->setupUi(this);
-    connect(ui->pbutton_dodaj, SIGNAL(clicked()), this, SLOT(Window_NowePytania()));
-    connect(ui->pbutton_nowyTest, SIGNAL(clicked()), this, SLOT(Window_NowyTest()));
-    connect(ui->pbutton_wczytaj, SIGNAL(clicked()), this, SLOT(LoadTestFile()));
-    connect(ui->pbutton_zapiszJako, SIGNAL(clicked()), this, SLOT(SaveTestFileNew()));
-    connect(ui->pbutton_zapisz, SIGNAL(clicked()), this, SLOT(SaveTestFileOld()));
+    connect(ui->pbutton_wczytaj, SIGNAL(clicked()), this, SLOT(loadTestFile()));
+    connect(ui->pbutton_nowyTest, SIGNAL(clicked()), this, SLOT(createTestFileNew()));
+    connect(ui->pbutton_zapiszJako, SIGNAL(clicked()), this, SLOT(saveTestFileNew()));
+    connect(ui->pbutton_zapisz, SIGNAL(clicked()), this, SLOT(saveTestFileOld()));
+    connect(ui->pushButton_next, SIGNAL(clicked()), this, SLOT(nextQuest()));
+    connect(ui->pushButton_previous, SIGNAL(clicked()), this, SLOT(previousQuest()));
+    connect(ui->pbutton_dodaj, SIGNAL(clicked()), this, SLOT(addNewQuest()));
+    connect(ui->pbutton_edytuj, SIGNAL(clicked()), this, SLOT(alterQuest()));
+    connect(ui->pbutton_usun, SIGNAL(clicked()), this, SLOT(deleteQuest()));
+    connect(ui->listWidget, SIGNAL(currentRowChanged(int)), this, SLOT(questClicked(int)));
 
-    m_questions = new Questions();
-
-    OdswiezWidok();
 }
 
 QuizEdit::~QuizEdit()
@@ -27,90 +31,105 @@ QuizEdit::~QuizEdit()
         delete m_questions;
 }
 
-void QuizEdit::OdswiezWidok()
+
+//tworzy nowy test w pliku i ładuje jego widok
+void QuizEdit::createTestFileNew()
 {
-    if(!m_questions || m_questions->questLists.empty())
-    {
-        ui->pbutton_edytuj->setEnabled(false);
-        ui->pbutton_usun->setEnabled(false);
-        ui->pbutton_dodaj->setEnabled(false);
-        ui->pbutton_zapisz->setEnabled(false);
-        ui->pbutton_zapiszJako->setEnabled(false);
-        ui->listWidget->setEnabled(false);
-        return;
+    ui->lineEdit->setText(QFileDialog::getOpenFileName(this, tr("Stwórz nowy plik"), "", tr("Xml files (*.xml);;All Files (*)")));
+    if(!loadQuiz()) {
+        qDebug() << "Nie mozna wczytac pliku! QuizEdit::LoadTestFile::LoadFile";
+        QMessageBox::warning(this,tr("Nieudane stworzenie!"),tr("Nie udało się stworzyć nowego pliku"),QMessageBox::Ok);
     }
-
-
-
-    ui->pbutton_edytuj->setEnabled(true);
-    ui->pbutton_usun->setEnabled(true);
-
-    ui->pbutton_dodaj->setEnabled(true);
-    ui->pbutton_zapisz->setEnabled(true);
-    ui->pbutton_zapiszJako->setEnabled(true);
-    ui->listWidget->setEnabled(true);
-
-    /*for(int i=0; i<MAX_QUEST_LIST; ++i)
-    {
-        QList<Quest>& lista = m_questions->questLists[i];
-        QList<Quest>::iterator itr = lista.begin();
-        while(itr != lista.end())
-        {
-            QListWidgetItem* newitem = new QListWidgetItem((*itr).question);
-            ui->listWidget->addItem(newitem);;
-            delete newitem;
-            ++itr;
-        }
-    }*/
-    return;
+    else {
+        refreshView();
+    }
 }
 
-bool QuizEdit::LoadTest(QString filename)
+// ładuje istniejący test
+void QuizEdit::loadTestFile()
 {
-    m_questions->set_filename(filename);
-    if(m_questions->loadFile())
-    {
-        OdswiezWidok();
+    ui->lineEdit->setText(QFileDialog::getOpenFileName(this, tr("Wszytaj istniejacy test"), "", tr("Xml files (*.xml);;All Files (*)")));
+    qDebug() << ("ścieżka: " + ui->lineEdit->text());
+    if(!loadQuiz()) {
+        qDebug() << "Nie mozna wczytac pliku! QuizEdit::LoadTestFile::LoadFile";
+        QMessageBox::warning(this,tr("Nieudane wczytanie!"),tr("Nie udało się wczytać pliku"),QMessageBox::Ok);
+    }
+
+}
+
+//zapisuje jako ...
+void QuizEdit::saveTestFileNew()
+{
+    ui->lineEdit->setText(QFileDialog::getOpenFileName(this, tr("Zapisz test jako nowy plik"), "", tr("Xml files (*.xml);;All Files (*)")));
+    if(!saveQuiz())
+        qDebug() << "Nie mozna zapis pliku! QuizEdit::SaveTestFile::SaveTest";
+    QMessageBox::warning(this,tr("Nieudany zapis pliku!"),tr("Nie udało się zapisać pliku"),QMessageBox::Ok);
+
+}
+
+//zapis akutalnego testu
+void QuizEdit::saveTestFileOld()
+{
+    if(!saveQuiz())
+        qDebug() << "Nie mozna zapis pliku! QuizEdit::SaveTestFile::SaveTest";
+    QMessageBox::warning(this,tr("Nieudany zapis pliku!"),tr("Nie udało się zapisać pliku"),QMessageBox::Ok);
+}
+
+//wyświetl następne pytanie
+void QuizEdit::nextQuest()
+{
+ //ładowanie następnego z listy
+}
+
+//wyświetl poprzednie pytanie
+void QuizEdit::previousQuest()
+{
+
+}
+
+//dodaje nowe pytanie
+void QuizEdit::addNewQuest()
+{
+
+}
+
+//zmienia istniejące pytanie
+void QuizEdit::alterQuest()
+{
+
+}
+
+//usuwa wybrany test
+void QuizEdit::deleteQuest()
+{
+
+}
+
+//wybiera test po kliknięciu go na liście
+void QuizEdit::questClicked(int row)
+{
+
+}
+
+/////////private ////////////////
+
+bool QuizEdit::loadQuiz()
+{
+    if(m_questions) delete m_questions;
+    m_questions = new Questions();
+    m_questions->set_filename(ui->lineEdit->text());
+    m_questions->set_description(ui->lineEdit_2->text());
+    if(m_questions->loadFile()) {
+        refreshView();
         return true;
     }
-
-    return false;
+    else return false;
 }
 
-bool QuizEdit::SaveTest(QString filename)
+//ustawia widok w liście -----------wymaga poprawy!!!
+void QuizEdit::refreshView()
 {
-    m_questions->set_filename(filename);
-    return m_questions->saveFile();
-}
 
-
-///* SLOTS *///
-void QuizEdit::Window_NowePytania()
-{
-    Quest pytanie("pytanie", "odpowiedz A", "odpowiedz B", "odpowiedz C", "odpowiedz D", 'A', 1);
-    m_questions->addQuest(pytanie); // !RUNTIME ERROR!
-    QuestEditor* qedit = new QuestEditor(0, true, pytanie);
-    qedit->show();
-    connect(qedit, SIGNAL(destroyed()), this, SLOT(Odswiez()));
-}
-
-void QuizEdit::Window_NowyTest()
-{
-    //TODO: dialog do wpisania nazwy
-    m_questions = new Questions();
-    OdswiezWidok();
-}
-
-void QuizEdit::Window_EdytujPytania(Quest& pytania)
-{
-    QuestEditor* qedit = new QuestEditor(this, false, pytania);
-    qedit->show();
-    connect(qedit, SIGNAL(destroyed()), this, SLOT(Odswiez()));
-}
-
-
-void QuizEdit::Odswiez()
-{
     for(int i=0; i<MAX_QUEST_LIST; ++i)
     {
         QList<Quest>& lista = m_questions->questLists[i];
@@ -120,7 +139,7 @@ void QuizEdit::Odswiez()
             if((*itr).level != i)
             {
                 int j = (*itr).level;
-                QList<Quest>& nowalista = m_questions->questLists[j];
+                QList<Quest>& nowalista = m_questions->questLists[j-1];
                 nowalista.push_back((*itr));
                 QList<Quest>::iterator next = itr+1;
                 lista.erase(itr);
@@ -132,35 +151,18 @@ void QuizEdit::Odswiez()
             }
         }//end while
     }//end for
-
-    OdswiezWidok();
-}
-
-
-void QuizEdit::LoadTestFile()
-{
-    QString file = QFileDialog::getOpenFileName(this, tr("Wszytaj istniejacy test"), "", tr("Xml files (*.xml);;All Files (*)"));
-    if(!LoadTest(file))
-        qDebug() << "Nie mozna wczytac pliku! QuizEdit::LoadTestFile::LoadFile";
-    else
-        Odswiez();
-}
-
-void QuizEdit::SaveTestFileNew()
-{
-    QString file = QFileDialog::getOpenFileName(this, tr("Zapisz test jako nowy plik"), "", tr("Xml files (*.xml);;All Files (*)"));
-    if(!SaveTest(file))
-        qDebug() << "Nie mozna zapis pliku! QuizEdit::SaveTestFile::SaveTest";
-}
-
-void QuizEdit::SaveTestFileOld()
-{
-    if(m_questions->get_filename().isEmpty())
-        return SaveTestFileNew();
-
-    bool b = m_questions->saveFile();
-
-    Q_ASSERT(b);
-
     return;
 }
+
+
+
+
+bool QuizEdit::saveQuiz()
+{ 
+    m_questions->set_filename(ui->lineEdit->text());
+    return m_questions->saveFile();
+}
+
+
+
+

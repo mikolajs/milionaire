@@ -121,22 +121,22 @@ void QuizShow::phoneAction()
 void QuizShow::makeSelectAnswer()
 {
     //podmieniania obrazków pod button_answX
-    ui->button_answA->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButtonB.png);color:white;"));
-    ui->button_answB->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButtonB.png);color:white;"));
-    ui->button_answC->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButtonB.png);color:white;"));
-    ui->button_answD->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButtonB.png);color:white;"));
+    ui->button_answA->setStyleSheet(QString::fromUtf8("background-color: rgb(0,0,128);color:white;"));
+    ui->button_answB->setStyleSheet(QString::fromUtf8("background-color: rgb(0,0,128);color:white;"));
+    ui->button_answC->setStyleSheet(QString::fromUtf8("background-color: rgb(0,0,128);color:white;"));
+    ui->button_answD->setStyleSheet(QString::fromUtf8("background-color: rgb(0,0,128);color:white;"));
     switch (selectedAnswer.toAscii()) {
     case 'A':
-        ui->button_answA->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButton.png);color:white;"));
+        ui->button_answA->setStyleSheet(QString::fromUtf8("background-color: rgb(20,128,128);color:white;"));
         break;
     case 'B':
-        ui->button_answB->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButton.png);color:white;"));
+        ui->button_answB->setStyleSheet(QString::fromUtf8("background-color: rgb(20,128,128);color:white;"));
         break;
     case 'C':
-        ui->button_answC->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButton.png);color:white;"));
+        ui->button_answC->setStyleSheet(QString::fromUtf8("background-color: rgb(20,128,128);color:white;"));
         break;
     case 'D':
-        ui->button_answD->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/backgroundAnswerButton.png);color:white;"));
+        ui->button_answD->setStyleSheet(QString::fromUtf8("background-color: rgb(20,128,128);color:white;"));
         break;
     }
 }
