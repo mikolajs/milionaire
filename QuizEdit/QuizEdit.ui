@@ -91,7 +91,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_4"/>
+       <widget class="QLineEdit" name="lineEdit_B"/>
       </item>
      </layout>
     </item>
@@ -234,22 +234,22 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
-       <widget class="QPushButton" name="pbutton_dodaj">
-        <property name="text">
-         <string>Zapisz</string>
-        </property>
-        <property name="default">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
        <widget class="QPushButton" name="pbutton_edytuj">
         <property name="enabled">
          <bool>true</bool>
         </property>
         <property name="text">
+         <string>Zapisz</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pbutton_dodaj">
+        <property name="text">
          <string>Dodaj</string>
+        </property>
+        <property name="default">
+         <bool>true</bool>
         </property>
        </widget>
       </item>

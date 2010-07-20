@@ -16,17 +16,17 @@ public:
     Questions();
     Questions(QString opis, QString nazwa);
 
-    QVector<QList<Quest> > questLists;
-
+    QVector<Quest> questVector;
     QString get_filename() const { return filename; }
     QString get_description() const { return description; }
     void set_description(QString value) { description = value; }
     void set_filename(QString value) { filename = value; }
+    /** podaje tablicę wymiaru MAX_QUEST_LIST z ilością pytań w kolejnych poziomach (index + 1)*/
+    QVector<int> countQuestionInLevels();
+    /** podaje ilość pytań w vektorze*/
+    int getSize() { return questVector.size(); }
 
-
-
-
-    void addQuest(Quest quest);
+    void addQuest(Quest& quest);
     /** ładuje dane z pliku (wcześniej należy ustawić nazwę pliku set_filename()) */
     bool loadFile();
     /** zapisuje dane do aktualnego pliku (według nazwy filename) */
@@ -34,21 +34,20 @@ public:
 
     //metoda tylko do testów
     void test();
-
+    //czyści dane
+    void clear();
 
 private:
     QString description;
     QString filename;
 
-    void ResetData();
+    void resetData();
 
-    //zapisuje daną listę do strumienia XML
-    void writeQuestList(QList<Quest>& questList, QXmlStreamWriter& save); ///poprawić sygnaturę!!!
     //odczytuje pojedyncze pytanie ze strumienia i dodaje do odpowiedniej listy
     void readQuestion(QXmlStreamReader& load);
 
     //pomocnicza do przeniesienia
-    QList<Quest> makeQuiz();
+    QVector<Quest> makeQuiz();
     //tworzenie testowego pliku
     void createXMLforTest() ;
     //drukuje na stdout zawartość list z Quizami

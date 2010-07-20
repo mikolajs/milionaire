@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'QuizEdit.ui'
 **
-** Created: Mon Jul 19 17:59:27 2010
+** Created: Tue Jul 20 21:49:13 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -42,7 +42,7 @@ public:
     QLabel *label_2;
     QLineEdit *lineEdit_A;
     QLabel *label_3;
-    QLineEdit *lineEdit_4;
+    QLineEdit *lineEdit_B;
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_4;
     QLineEdit *lineEdit_C;
@@ -55,8 +55,8 @@ public:
     QLabel *label;
     QComboBox *comboBox;
     QHBoxLayout *horizontalLayout_2;
-    QPushButton *pbutton_dodaj;
     QPushButton *pbutton_edytuj;
+    QPushButton *pbutton_dodaj;
     QPushButton *pbutton_usun;
     QWidget *verticalLayoutWidget_2;
     QVBoxLayout *verticalLayout_2;
@@ -150,10 +150,10 @@ public:
 
         horizontalLayout_3->addWidget(label_3);
 
-        lineEdit_4 = new QLineEdit(verticalLayoutWidget);
-        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
+        lineEdit_B = new QLineEdit(verticalLayoutWidget);
+        lineEdit_B->setObjectName(QString::fromUtf8("lineEdit_B"));
 
-        horizontalLayout_3->addWidget(lineEdit_4);
+        horizontalLayout_3->addWidget(lineEdit_B);
 
 
         verticalLayout->addLayout(horizontalLayout_3);
@@ -221,17 +221,17 @@ public:
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        pbutton_dodaj = new QPushButton(verticalLayoutWidget);
-        pbutton_dodaj->setObjectName(QString::fromUtf8("pbutton_dodaj"));
-        pbutton_dodaj->setDefault(true);
-
-        horizontalLayout_2->addWidget(pbutton_dodaj);
-
         pbutton_edytuj = new QPushButton(verticalLayoutWidget);
         pbutton_edytuj->setObjectName(QString::fromUtf8("pbutton_edytuj"));
         pbutton_edytuj->setEnabled(true);
 
         horizontalLayout_2->addWidget(pbutton_edytuj);
+
+        pbutton_dodaj = new QPushButton(verticalLayoutWidget);
+        pbutton_dodaj->setObjectName(QString::fromUtf8("pbutton_dodaj"));
+        pbutton_dodaj->setDefault(true);
+
+        horizontalLayout_2->addWidget(pbutton_dodaj);
 
         pbutton_usun = new QPushButton(verticalLayoutWidget);
         pbutton_usun->setObjectName(QString::fromUtf8("pbutton_usun"));
@@ -429,8 +429,8 @@ public:
          << QApplication::translate("QuizEdit", "4", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("QuizEdit", "5", 0, QApplication::UnicodeUTF8)
         );
-        pbutton_dodaj->setText(QApplication::translate("QuizEdit", "Zapisz", 0, QApplication::UnicodeUTF8));
-        pbutton_edytuj->setText(QApplication::translate("QuizEdit", "Dodaj", 0, QApplication::UnicodeUTF8));
+        pbutton_edytuj->setText(QApplication::translate("QuizEdit", "Zapisz", 0, QApplication::UnicodeUTF8));
+        pbutton_dodaj->setText(QApplication::translate("QuizEdit", "Dodaj", 0, QApplication::UnicodeUTF8));
         pbutton_usun->setText(QApplication::translate("QuizEdit", "Usu\305\204", 0, QApplication::UnicodeUTF8));
         pbutton_wczytaj->setText(QApplication::translate("QuizEdit", "Otw\303\263rz", 0, QApplication::UnicodeUTF8));
         pbutton_nowyTest->setText(QApplication::translate("QuizEdit", "Nowy", 0, QApplication::UnicodeUTF8));

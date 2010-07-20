@@ -1,5 +1,6 @@
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QStringList>
 
 #include "QuizEdit.h"
 #include "ui_QuizEdit.h"
@@ -9,6 +10,8 @@
 
 QuizEdit::QuizEdit(QWidget *parent) : QWidget(parent), ui(new Ui::QuizEdit)
 {
+    QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
+    QTextCodec::setCodecForTr(QTextCodec::codecForName("UTF-8"));
     m_questions = 0; //zeruje wskaźnik
     ui->setupUi(this);
     connect(ui->pbutton_wczytaj, SIGNAL(clicked()), this, SLOT(loadTestFile()));
@@ -35,134 +38,216 @@ QuizEdit::~QuizEdit()
 //tworzy nowy test w pliku i ładuje jego widok
 void QuizEdit::createTestFileNew()
 {
-    ui->lineEdit->setText(QFileDialog::getOpenFileName(this, tr("Stwórz nowy plik"), "", tr("Xml files (*.xml);;All Files (*)")));
-    if(!loadQuiz()) {
-        qDebug() << "Nie mozna wczytac pliku! QuizEdit::LoadTestFile::LoadFile";
-        QMessageBox::warning(this,tr("Nieudane stworzenie!"),tr("Nie udało się stworzyć nowego pliku"),QMessageBox::Ok);
-    }
-    else {
-        refreshView();
-    }
+    ui->lineEdit->setText(QFileDialog::getSaveFileName(this, tr("Stwórz nowy plik"), "", tr("Xml files (*.xml);;All Files (*)")));
+    ui->listWidget->clear();
+    ui->textEdit->clear();
+    ui->lineEdit_2->clear();
+    ui->lineEdit_A->clear();
+    ui->lineEdit_B->clear();
+    ui->lineEdit_C->clear();
+    ui->lineEdit_D->clear();
+    m_questions->clear();
+    refreshView();
 }
 
 // ładuje istniejący test
 void QuizEdit::loadTestFile()
 {
     ui->lineEdit->setText(QFileDialog::getOpenFileName(this, tr("Wszytaj istniejacy test"), "", tr("Xml files (*.xml);;All Files (*)")));
-    qDebug() << ("ścieżka: " + ui->lineEdit->text());
+    qDebug() << ("ścieżka ładowania starego: " + ui->lineEdit->text());
     if(!loadQuiz()) {
         qDebug() << "Nie mozna wczytac pliku! QuizEdit::LoadTestFile::LoadFile";
         QMessageBox::warning(this,tr("Nieudane wczytanie!"),tr("Nie udało się wczytać pliku"),QMessageBox::Ok);
     }
+
 
 }
 
 //zapisuje jako ...
 void QuizEdit::saveTestFileNew()
 {
-    ui->lineEdit->setText(QFileDialog::getOpenFileName(this, tr("Zapisz test jako nowy plik"), "", tr("Xml files (*.xml);;All Files (*)")));
-    if(!saveQuiz())
+    ui->lineEdit->setText(QFileDialog::getSaveFileName(this, tr("Zapisz test jako nowy plik"), "", tr("Xml files (*.xml);;All Files (*)")));
+    if(!saveQuiz()) {
         qDebug() << "Nie mozna zapis pliku! QuizEdit::SaveTestFile::SaveTest";
-    QMessageBox::warning(this,tr("Nieudany zapis pliku!"),tr("Nie udało się zapisać pliku"),QMessageBox::Ok);
+        QMessageBox::warning(this,tr("Nieudany zapis pliku!"),tr("Nie udało się zapisać pliku"),QMessageBox::Ok);
+    }
 
 }
 
 //zapis akutalnego testu
 void QuizEdit::saveTestFileOld()
 {
-    if(!saveQuiz())
+    if(!saveQuiz()) {
         qDebug() << "Nie mozna zapis pliku! QuizEdit::SaveTestFile::SaveTest";
-    QMessageBox::warning(this,tr("Nieudany zapis pliku!"),tr("Nie udało się zapisać pliku"),QMessageBox::Ok);
+        QMessageBox::warning(this,tr("Nieudany zapis pliku!"),tr("Nie udało się zapisać pliku"),QMessageBox::Ok);
+    }
 }
+
 
 //wyświetl następne pytanie
 void QuizEdit::nextQuest()
 {
- //ładowanie następnego z listy
+    int row = ui->listWidget->currentRow();
+    if (row < m_questions->questVector.size() -1) {
+        row++;
+        ui->listWidget->setCurrentRow(row);
+        //showQuest();
+    }
 }
 
 //wyświetl poprzednie pytanie
 void QuizEdit::previousQuest()
 {
-
+     int row = ui->listWidget->currentRow();
+     if (row > 0) {
+         row--;
+         ui->listWidget->setCurrentRow(row);
+         //showQuest();
+     }
 }
 
 //dodaje nowe pytanie
 void QuizEdit::addNewQuest()
 {
-
+    Quest q;
+    q.correct = ui->comboBox_2->currentText()[0];
+    q.level = ui->comboBox->currentText().toInt();
+    q.question = ui->textEdit->document()->toPlainText();
+    q.A = ui->lineEdit_A->text();
+    q.B = ui->lineEdit_B->text();
+    q.C = ui->lineEdit_C->text();
+    q.D = ui->lineEdit_D->text();
+    if (q.valid()) {
+        m_questions->addQuest(q);
+        refreshView();
+    }
+    else {
+        QMessageBox::warning(this,"Błąd","Nieprawidłowe dane!",QMessageBox::Ok);
+    }
 }
 
-//zmienia istniejące pytanie
+//zmienia istniejące pytanie --niezabezpieczone błędy danych
 void QuizEdit::alterQuest()
 {
-
+    if (ui->listWidget->count() < 1) {
+        addNewQuest();
+        return;
+    }
+    int row = ui->listWidget->currentRow();
+    Quest& q = m_questions->questVector[row];
+    q.correct = ui->comboBox_2->currentText()[0];
+    q.level = ui->comboBox->currentText().toInt();
+    q.question = ui->textEdit->document()->toPlainText();
+    q.A = ui->lineEdit_A->text();
+    q.B = ui->lineEdit_B->text();
+    q.C = ui->lineEdit_C->text();
+    q.D = ui->lineEdit_D->text();
+    refreshView();
 }
 
 //usuwa wybrany test
 void QuizEdit::deleteQuest()
 {
-
+    int row = ui->listWidget->currentRow();
+    m_questions->questVector.remove(row);
+    refreshView();
 }
 
 //wybiera test po kliknięciu go na liście
 void QuizEdit::questClicked(int row)
 {
-
+    if (row > -1) showQuest(row);
 }
 
 /////////private ////////////////
-
+//wczytanie z pliku
 bool QuizEdit::loadQuiz()
 {
     if(m_questions) delete m_questions;
     m_questions = new Questions();
     m_questions->set_filename(ui->lineEdit->text());
-    m_questions->set_description(ui->lineEdit_2->text());
     if(m_questions->loadFile()) {
         refreshView();
+        ui->listWidget->setCurrentRow(0);
+        if (m_questions->questVector.size() > 0) showQuest(0);
+        ui->lineEdit_2->setText(m_questions->get_description());
         return true;
     }
     else return false;
 }
 
-//ustawia widok w liście -----------wymaga poprawy!!!
+//ustawia widok w liście
 void QuizEdit::refreshView()
 {
+    //wyświetlanie listy
+    QStringList strList;
+    for (QVector<Quest>::iterator it = m_questions->questVector.begin(); it != m_questions->questVector.end(); ++it){
+        strList.append(QString::number((*it).level) + " - " + (*it).question.left(50));
+    }
+    int tempRow = ui->listWidget->currentRow(); //backup
+    ui->listWidget->clear();
+    ui->listWidget->addItems(strList);
 
-    for(int i=0; i<MAX_QUEST_LIST; ++i)
-    {
-        QList<Quest>& lista = m_questions->questLists[i];
-        QList<Quest>::iterator itr = lista.begin();
-        while(itr!=lista.end())
-        {
-            if((*itr).level != i)
-            {
-                int j = (*itr).level;
-                QList<Quest>& nowalista = m_questions->questLists[j-1];
-                nowalista.push_back((*itr));
-                QList<Quest>::iterator next = itr+1;
-                lista.erase(itr);
-                itr=next;
-            }
-            else
-            {
-                ++itr;
-            }
-        }//end while
-    }//end for
-    return;
+    ui->listWidget->setCurrentRow(tempRow);
+            //ile jest w poziomach pytań
+    QVector<int> vect;
+    vect = m_questions->countQuestionInLevels();
+    ui->lineEdit_3->setText(QString::number(vect[0]));
+    ui->lineEdit_5->setText(QString::number(vect[1]));
+    ui->lineEdit_6->setText(QString::number(vect[2]));
+    ui->lineEdit_7->setText(QString::number(vect[3]));
+    ui->lineEdit_8->setText(QString::number(vect[4]));
+    if (ui->listWidget->count() > 0 && ui->listWidget->currentRow() == -1 ) ui->listWidget->setCurrentRow(0);
+
+
 }
 
 
 
-
+//zapis do pliku
 bool QuizEdit::saveQuiz()
 { 
     m_questions->set_filename(ui->lineEdit->text());
+    m_questions->set_description(ui->lineEdit_2->text());
     return m_questions->saveFile();
 }
 
+//wyświetlanie zaznaczonego aktualnie pytania
+void QuizEdit::showQuest(int row)
+{
+    //int row = ui->listWidget->currentRow();
+    Quest& q = m_questions->questVector[row];
+    ui->textEdit->setText(q.question);
+    ui->lineEdit_A->setText(q.A);
+    ui->lineEdit_B->setText(q.B);
+    ui->lineEdit_C->setText(q.C);
+    ui->lineEdit_D->setText(q.D);
+    ui->comboBox->setCurrentIndex(q.level - 1);
+    int index_correct;
+    switch (q.correct.toAscii()) {
+    case 'A':
+        index_correct = 0;
+        break;
+    case 'B':
+        index_correct = 1;
+        break;
+    case 'C':
+        index_correct = 2;
+        break;
+    case 'D':
+        index_correct = 3;
+        break;
+    default:
+        qDebug() << "Niemożliwa wartość prawidłowej odpowiedzi!";
+    }
+    ui->comboBox_2->setCurrentIndex(index_correct);
 
+}
 
+///////////testowe //////////////
+
+void QuizEdit::printRow() {
+    qDebug() << "current row: ";
+    qDebug() << ui->listWidget->currentRow();
+}
 

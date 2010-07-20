@@ -6,24 +6,21 @@ Questions::Questions()
 {
     description = "Pusta";
     filename = "";
-    questLists.resize(MAX_QUEST_LIST); //ustawiam rozmiar vectora
 }
 
 Questions::Questions(QString opis, QString nazwa)
 {
     description = opis;
     filename = nazwa;
-    questLists.resize(MAX_QUEST_LIST); //ustawiam rozmiar vectora
 }
 
-void Questions::addQuest(Quest quest)
+void Questions::addQuest(Quest& quest)
 {
     if (!quest.valid())
         return;
     int level = quest.level - 1;
     Q_ASSERT(level < MAX_QUEST_LIST && level >= 0);
-    questLists[quest.level - 1].push_back(quest);
-
+    questVector.push_back(quest);
 }
 
 
@@ -38,8 +35,19 @@ bool Questions::loadFile()
 
     QXmlStreamReader load(&File);
     //kasowanie dotychczasowej wartości
-    ResetData();
-
+    resetData();
+    //wczytanie opisu
+    while (!load.atEnd()) {
+        if (load.readNext() == QXmlStreamReader::StartElement && load.name() == "description" ) {
+            if (load.isStartElement()) {
+                if (load.name() == "description") {
+                    description = load.readElementText();
+                    break;
+                }
+            }
+        }
+    }
+    //wczytanie reszty
     while(!load.atEnd()) {
         if (load.readNext() == QXmlStreamReader::StartElement && load.name().toString() == "quest" ) {
             readQuestion(load); //przekazanie kontroli do metody wyczytującej pytania
@@ -109,17 +117,8 @@ bool Questions::saveFile()
     save.writeStartElement("description");
     save.writeCharacters(description);
     save.writeEndElement();
-    for (QVector<QList<Quest> >::iterator it = questLists.begin(); it != questLists.end(); ++it)
-         writeQuestList(*it,save);
+    for (QVector<Quest>::iterator it = questVector.begin(); it != questVector.end(); ++it) {
 
-
-    save.writeEndDocument(); //zamyka root i dodaje pustą linię
-    return true;
-}
-
-void Questions::writeQuestList(QList<Quest>& questList, QXmlStreamWriter& save)
-{
-     for (QList<Quest>::iterator it = questList.begin(); it != questList.end(); ++it) {
         save.writeStartElement("quest");
 
         save.writeStartElement("level");
@@ -153,14 +152,32 @@ void Questions::writeQuestList(QList<Quest>& questList, QXmlStreamWriter& save)
 
         save.writeEndElement(); //quest
     }
+
+    save.writeEndDocument(); //zamyka root i dodaje pustą linię
+    return true;
 }
 
-void Questions::ResetData()
+void Questions::clear()
+{
+    resetData();
+}
+
+void Questions::resetData()
     {
         description.clear();
-        for (QVector<QList<Quest> >::iterator it = questLists.begin(); it != questLists.end(); ++it)
-         (*it).clear();
+        questVector.clear();
     }
+
+QVector<int> Questions::countQuestionInLevels(){
+    QVector<int> tab;
+    tab.resize(MAX_QUEST_LIST);
+    for (int i = 0; i < MAX_QUEST_LIST; i++) tab[i] = 0;
+    for (QVector<Quest>::iterator it = questVector.begin(); it != questVector.end(); ++it) {
+        tab[(*it).level - 1]++;
+    }
+    return tab;
+}
+
 ////////////////////////////////////////TESTY/////////////////////////////////////////////
 /** metoda testująca zawartość klasy - na razy drukująca w konsoli kolejne pytania */
 void Questions::test()
@@ -170,9 +187,11 @@ void Questions::test()
     set_filename("testowy.xml");
     //tempReader();
     loadFile();
-    qDebug() << "Rozmiary list z pytaniami: ";
-    for (QVector<QList<Quest> >::iterator it = questLists.begin(); it != questLists.end(); ++it)
-         qDebug() <<  QString::number((*it).length());
+    qDebug() << "Ilość pytań: ";
+    qDebug() << questVector.size();
+    qDebug() << "Ilość w poziomach: ";
+    QVector<int> vec = countQuestionInLevels();
+    for (QVector<int>::iterator it = vec.begin(); it != vec.end(); ++it) qDebug() << (*it);
     set_description("Quiz przetworzony w teście.");
     set_filename("przetworzony.xml");
     saveFile();
@@ -212,8 +231,7 @@ void Questions::printContent()
     qDebug() << "OPIS: ";
     qDebug() << get_description();
     qDebug() << "\nPytania: \n";
-    for (QVector<QList<Quest> >::iterator  iter = questLists.begin(); iter != questLists.end(); ++iter)
-        for (QList<Quest>::iterator it = (*iter).begin(); it != (*iter).end(); ++it) {
+    for (QVector<Quest>::iterator  it = questVector.begin(); it != questVector.end(); ++it) {
             qDebug() << questToString(*it);
     }
 }

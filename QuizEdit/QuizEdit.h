@@ -24,6 +24,9 @@ private:
     void refreshView();
     bool loadQuiz();
     bool saveQuiz();
+    void showQuest(int row);
+    //testowe
+    void printRow();
 
 public slots:
     //tworzy nowy test w pliku i ładuje jego widok
