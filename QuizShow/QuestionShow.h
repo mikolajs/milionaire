@@ -12,7 +12,11 @@ public:
     /** dostarcza losową liczbę z zakresu 0-(range -1) ???   */
     int getRand(int range);
     QString test(int size);
+    QVector<QList<Quest> > questLists;
+    //robię swój konter aby nie przerabiać kodu
+     void makeQuestListContener();
 private:
+
 
 
 };

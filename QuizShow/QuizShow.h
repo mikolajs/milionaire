@@ -4,6 +4,12 @@
 #include <QtGui/QWidget>
 #include "QuestionShow.h"
 
+class QTimer;
+class QKeyEvent;
+//class QAction;
+//class QMenu;
+//class QToolBar;
+
 namespace Ui
 {
     class QuizShow;
@@ -19,8 +25,10 @@ public:
     ~QuizShow();
     /** sprawdza na początku gry czy można wylosować do końca gry pytania */
     bool canPerformNewQuiz();
-    /** losuje następne pytanie i wyświetla na formatce */
-    void showNext();
+
+protected:
+    virtual void keyPressEvent(QKeyEvent *);
+    virtual void resizeEvent(QResizeEvent *);
 
 public slots:
     /** akcja wybrania i zaznaczenia odpowiedzi */
@@ -36,11 +44,26 @@ public slots:
     void publicAction();
     /** telefon do przyjaciela */
     void phoneAction();
-    /** główna metoda wyświetlająca nawe pytanie */
-    void nextQuestion();
+    /** informacja o wygranej */
+    void showCongratulation();
+    /** sprawdza prawidłową odpowiedź, uruchamia timer i wypisuje inforamcje o wygranej*/
+    void showPrice();
+    /** pokazuje treść pytania*/
+    void showQuestion();
+    /** pokazuje końcową wygraną miliona */
+    void showFullWins();
+
 
 private:
     Ui::QuizShow *ui;
+    //flaga oznaczająca czy odłączono sloty
+    bool slotsDisabled;
+    //flagi użycia kół ratunkowych
+    bool fiftyUsed;
+    bool publicUsed;
+    bool phoneUsed;
+    //flaga odnotowująca czy użytkownik wybrał odpowiedź
+    bool answerIsChoosen;
     //kontener z pytaniami
     QuestionShow questions;
     //aktualnie wylosowane pytanie
@@ -51,10 +74,21 @@ private:
     int actualQuestion;
     //podmienia obrazki w button_answX aby zaznaczyć odpowiedź
     void makeSelectAnswer();
-    //pokazuje aktualne pytanie
-    void showQuestion();
     //tylko do testów
     void test();
+    //oblicza wartość wygranej
+    QString winsAmount();
+    // łączenie i rozłączanie slotów
+    void connectSlots();
+    void disconnectSlots();
+    //timer do oddzielenia informacji od wygranej od następnego pytania
+    QTimer* qtimer;
+    //akcja wyjścia skrót klawiszowy
+//    QAction* quitAct;
+//    QMenu* menu;
+//    QToolBar* toolbar;
+    //podłączenie slotów
+    void rawConnectSlots();
 
 };
 

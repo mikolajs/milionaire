@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'QuizShow.ui'
 **
-** Created: Tue Jul 13 20:47:02 2010
+** Created: Wed Aug 4 17:17:39 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -30,15 +30,9 @@ class Ui_QuizShow
 {
 public:
     QFrame *frame;
-    QWidget *verticalLayoutWidget;
-    QVBoxLayout *verticalLayout_3;
-    QPushButton *button_resign;
-    QPushButton *button_fifty_fifty;
-    QPushButton *button_phone;
-    QPushButton *button_public;
     QPushButton *button_next;
     QListWidget *listWidget;
-    QLabel *labelQ;
+    QLabel *labelBack;
     QWidget *horizontalLayoutWidget_5;
     QHBoxLayout *horizontalLayout_5;
     QVBoxLayout *verticalLayout;
@@ -49,12 +43,20 @@ public:
     QPushButton *button_answC;
     QPushButton *button_answD;
     QLabel *label_test;
+    QFrame *frame_2;
+    QWidget *horizontalLayoutWidget;
+    QHBoxLayout *horizontalLayout;
+    QPushButton *button_resign;
+    QPushButton *button_fifty_fifty;
+    QPushButton *button_phone;
+    QPushButton *button_public;
+    QLabel *labelQ;
 
     void setupUi(QWidget *QuizShow)
     {
         if (QuizShow->objectName().isEmpty())
             QuizShow->setObjectName(QString::fromUtf8("QuizShow"));
-        QuizShow->resize(800, 600);
+        QuizShow->resize(853, 623);
         QPalette palette;
         QBrush brush(QColor(70, 82, 255, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -69,64 +71,30 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::Window, brush);
         QuizShow->setPalette(palette);
         QuizShow->setAutoFillBackground(false);
-        QuizShow->setStyleSheet(QString::fromUtf8("background-color:rgb(70, 82, 255);"));
+        QuizShow->setStyleSheet(QString::fromUtf8("background-color: rgb(70, 82, 255);"));
         frame = new QFrame(QuizShow);
         frame->setObjectName(QString::fromUtf8("frame"));
-        frame->setGeometry(QRect(0, 0, 801, 601));
-        frame->setStyleSheet(QString::fromUtf8(""));
-        frame->setFrameShape(QFrame::StyledPanel);
-        frame->setFrameShadow(QFrame::Raised);
-        verticalLayoutWidget = new QWidget(frame);
-        verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(40, 40, 81, 261));
-        verticalLayout_3 = new QVBoxLayout(verticalLayoutWidget);
-        verticalLayout_3->setSpacing(6);
-        verticalLayout_3->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
-        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
-        button_resign = new QPushButton(verticalLayoutWidget);
-        button_resign->setObjectName(QString::fromUtf8("button_resign"));
-        QFont font;
-        font.setPointSize(12);
-        button_resign->setFont(font);
-        button_resign->setStyleSheet(QString::fromUtf8("background-image: url();"));
-        button_resign->setFlat(true);
-
-        verticalLayout_3->addWidget(button_resign);
-
-        button_fifty_fifty = new QPushButton(verticalLayoutWidget);
-        button_fifty_fifty->setObjectName(QString::fromUtf8("button_fifty_fifty"));
-        button_fifty_fifty->setStyleSheet(QString::fromUtf8("background-image: url();"));
-        button_fifty_fifty->setFlat(true);
-
-        verticalLayout_3->addWidget(button_fifty_fifty);
-
-        button_phone = new QPushButton(verticalLayoutWidget);
-        button_phone->setObjectName(QString::fromUtf8("button_phone"));
-        button_phone->setStyleSheet(QString::fromUtf8("background-image: url();"));
-        button_phone->setFlat(true);
-
-        verticalLayout_3->addWidget(button_phone);
-
-        button_public = new QPushButton(verticalLayoutWidget);
-        button_public->setObjectName(QString::fromUtf8("button_public"));
-        button_public->setStyleSheet(QString::fromUtf8("background-image: url();"));
-        button_public->setFlat(true);
-
-        verticalLayout_3->addWidget(button_public);
-
+        frame->setGeometry(QRect(0, 10, 800, 600));
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
+        frame->setSizePolicy(sizePolicy);
+        frame->setStyleSheet(QString::fromUtf8("background-color: none;"));
+        frame->setFrameShape(QFrame::NoFrame);
+        frame->setFrameShadow(QFrame::Plain);
         button_next = new QPushButton(frame);
         button_next->setObjectName(QString::fromUtf8("button_next"));
         button_next->setEnabled(true);
-        button_next->setGeometry(QRect(250, 250, 221, 31));
-        QFont font1;
-        font1.setFamily(QString::fromUtf8("Comic Sans MS"));
-        font1.setPointSize(12);
-        button_next->setFont(font1);
+        button_next->setGeometry(QRect(30, 390, 221, 31));
+        QFont font;
+        font.setFamily(QString::fromUtf8("Comic Sans MS"));
+        font.setPointSize(12);
+        button_next->setFont(font);
         button_next->setAutoFillBackground(false);
         button_next->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 128);\n"
 "color: rgb(255, 250, 249);\n"
-"background-image: url();"));
+"border-radius: 10px;"));
         button_next->setFlat(true);
         listWidget = new QListWidget(frame);
         new QListWidgetItem(listWidget);
@@ -134,24 +102,33 @@ public:
         new QListWidgetItem(listWidget);
         new QListWidgetItem(listWidget);
         new QListWidgetItem(listWidget);
+        QBrush brush1(QColor(255, 255, 0, 255));
+        brush1.setStyle(Qt::NoBrush);
+        QListWidgetItem *__qlistwidgetitem = new QListWidgetItem(listWidget);
+        __qlistwidgetitem->setForeground(brush1);
         new QListWidgetItem(listWidget);
         new QListWidgetItem(listWidget);
         new QListWidgetItem(listWidget);
         new QListWidgetItem(listWidget);
-        new QListWidgetItem(listWidget);
-        new QListWidgetItem(listWidget);
+        QBrush brush2(QColor(255, 255, 0, 255));
+        brush2.setStyle(Qt::NoBrush);
+        QBrush brush3(QColor(0, 0, 192, 255));
+        brush3.setStyle(Qt::NoBrush);
+        QListWidgetItem *__qlistwidgetitem1 = new QListWidgetItem(listWidget);
+        __qlistwidgetitem1->setBackground(brush3);
+        __qlistwidgetitem1->setForeground(brush2);
         new QListWidgetItem(listWidget);
         new QListWidgetItem(listWidget);
         new QListWidgetItem(listWidget);
         new QListWidgetItem(listWidget);
         listWidget->setObjectName(QString::fromUtf8("listWidget"));
-        listWidget->setGeometry(QRect(590, 10, 181, 301));
-        QFont font2;
-        font2.setFamily(QString::fromUtf8("Comic Sans MS"));
-        font2.setPointSize(10);
-        font2.setBold(true);
-        font2.setWeight(75);
-        listWidget->setFont(font2);
+        listWidget->setGeometry(QRect(590, 120, 181, 301));
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Comic Sans MS"));
+        font1.setPointSize(10);
+        font1.setBold(true);
+        font1.setWeight(75);
+        listWidget->setFont(font1);
         listWidget->setAutoFillBackground(true);
         listWidget->setStyleSheet(QString::fromUtf8("color: rgb(255, 250, 249);\n"
 "background-color: rgb(0, 0, 128);\n"
@@ -160,19 +137,21 @@ public:
         listWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
         listWidget->setProperty("showDropIndicator", QVariant(false));
         listWidget->setSelectionMode(QAbstractItemView::NoSelection);
-        labelQ = new QLabel(frame);
-        labelQ->setObjectName(QString::fromUtf8("labelQ"));
-        labelQ->setGeometry(QRect(30, 330, 741, 131));
-        QFont font3;
-        font3.setFamily(QString::fromUtf8("Comic Sans MS"));
-        font3.setPointSize(14);
-        labelQ->setFont(font3);
-        labelQ->setAutoFillBackground(false);
-        labelQ->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 128);\n"
-"color: rgb(255, 250, 249);\n"
-"background-image: url();\n"
-"border-radius: 20px;"));
-        labelQ->setAlignment(Qt::AlignCenter);
+        listWidget->setLayoutMode(QListView::Batched);
+        listWidget->setSpacing(0);
+        listWidget->setViewMode(QListView::ListMode);
+        listWidget->setModelColumn(0);
+        labelBack = new QLabel(frame);
+        labelBack->setObjectName(QString::fromUtf8("labelBack"));
+        labelBack->setGeometry(QRect(50, 10, 431, 231));
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("Comic Sans MS"));
+        font2.setPointSize(14);
+        labelBack->setFont(font2);
+        labelBack->setAutoFillBackground(false);
+        labelBack->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/cloud.png);\n"
+""));
+        labelBack->setAlignment(Qt::AlignCenter);
         horizontalLayoutWidget_5 = new QWidget(frame);
         horizontalLayoutWidget_5->setObjectName(QString::fromUtf8("horizontalLayoutWidget_5"));
         horizontalLayoutWidget_5->setGeometry(QRect(30, 460, 741, 121));
@@ -189,7 +168,7 @@ public:
         button_answA->setEnabled(true);
         button_answA->setMinimumSize(QSize(332, 40));
         button_answA->setMaximumSize(QSize(332, 40));
-        button_answA->setFont(font1);
+        button_answA->setFont(font);
         button_answA->setAutoFillBackground(false);
         button_answA->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 128);\n"
 "background-image: url();\n"
@@ -205,7 +184,7 @@ public:
         button_answB->setEnabled(true);
         button_answB->setMinimumSize(QSize(332, 40));
         button_answB->setMaximumSize(QSize(332, 40));
-        button_answB->setFont(font1);
+        button_answB->setFont(font);
         button_answB->setAutoFillBackground(false);
         button_answB->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 128);\n"
 "color: rgb(255, 250, 249);\n"
@@ -230,12 +209,12 @@ public:
         button_answC->setEnabled(true);
         button_answC->setMinimumSize(QSize(332, 40));
         button_answC->setMaximumSize(QSize(332, 40));
-        button_answC->setFont(font1);
+        button_answC->setFont(font);
         button_answC->setAutoFillBackground(false);
         button_answC->setStyleSheet(QString::fromUtf8("background-color:rgb(0, 0, 128);\n"
 "color: rgb(255, 250, 249);\n"
 "border-radius: 10px;\n"
-"background-image: url();"));
+""));
         button_answC->setFlat(true);
 
         verticalLayout_2->addWidget(button_answC);
@@ -245,7 +224,7 @@ public:
         button_answD->setEnabled(true);
         button_answD->setMinimumSize(QSize(332, 40));
         button_answD->setMaximumSize(QSize(332, 40));
-        button_answD->setFont(font1);
+        button_answD->setFont(font);
         button_answD->setAutoFillBackground(false);
         button_answD->setStyleSheet(QString::fromUtf8("background-color:rgb(0, 0, 128);\n"
 "color: rgb(255, 250, 249);\n"
@@ -261,12 +240,89 @@ public:
 
         label_test = new QLabel(frame);
         label_test->setObjectName(QString::fromUtf8("label_test"));
-        label_test->setGeometry(QRect(140, 20, 421, 211));
-        label_test->setStyleSheet(QString::fromUtf8("background-image: url();"));
+        label_test->setGeometry(QRect(270, 200, 301, 261));
+        label_test->setAutoFillBackground(false);
+        label_test->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/man_on_chair.png);\n"
+"background-repeat: no-repeat;\n"
+"background-color: none;"));
+        frame_2 = new QFrame(frame);
+        frame_2->setObjectName(QString::fromUtf8("frame_2"));
+        frame_2->setGeometry(QRect(510, 20, 261, 61));
+        frame_2->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 128);"));
+        frame_2->setFrameShape(QFrame::StyledPanel);
+        frame_2->setFrameShadow(QFrame::Raised);
+        horizontalLayoutWidget = new QWidget(frame_2);
+        horizontalLayoutWidget->setObjectName(QString::fromUtf8("horizontalLayoutWidget"));
+        horizontalLayoutWidget->setGeometry(QRect(0, 0, 261, 62));
+        horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        button_resign = new QPushButton(horizontalLayoutWidget);
+        button_resign->setObjectName(QString::fromUtf8("button_resign"));
+        button_resign->setMinimumSize(QSize(60, 60));
+        button_resign->setMaximumSize(QSize(60, 60));
+        QFont font3;
+        font3.setPointSize(12);
+        button_resign->setFont(font3);
+        button_resign->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/exit.png);\n"
+"background-repeat: no-repeat;\n"
+"background-color: none;"));
+        button_resign->setFlat(true);
+
+        horizontalLayout->addWidget(button_resign);
+
+        button_fifty_fifty = new QPushButton(horizontalLayoutWidget);
+        button_fifty_fifty->setObjectName(QString::fromUtf8("button_fifty_fifty"));
+        button_fifty_fifty->setMinimumSize(QSize(60, 60));
+        button_fifty_fifty->setMaximumSize(QSize(60, 60));
+        button_fifty_fifty->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/fifty.png);\n"
+"background-repeat: no-repeat;\n"
+"background-color: none;"));
+        button_fifty_fifty->setFlat(true);
+
+        horizontalLayout->addWidget(button_fifty_fifty);
+
+        button_phone = new QPushButton(horizontalLayoutWidget);
+        button_phone->setObjectName(QString::fromUtf8("button_phone"));
+        button_phone->setMinimumSize(QSize(60, 60));
+        button_phone->setMaximumSize(QSize(60, 60));
+        button_phone->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/phone.png);\n"
+"background-repeat: no-repeat;\n"
+"background-color: none;"));
+        button_phone->setFlat(true);
+
+        horizontalLayout->addWidget(button_phone);
+
+        button_public = new QPushButton(horizontalLayoutWidget);
+        button_public->setObjectName(QString::fromUtf8("button_public"));
+        button_public->setMinimumSize(QSize(60, 60));
+        button_public->setMaximumSize(QSize(60, 60));
+        button_public->setStyleSheet(QString::fromUtf8("background-image: url(:/main/images/public.png);\n"
+"background-repeat: no-repeat;\n"
+"background-color: none;"));
+        button_public->setFlat(true);
+
+        horizontalLayout->addWidget(button_public);
+
+        labelQ = new QLabel(frame);
+        labelQ->setObjectName(QString::fromUtf8("labelQ"));
+        labelQ->setGeometry(QRect(80, 40, 361, 121));
+        QFont font4;
+        font4.setFamily(QString::fromUtf8("Comic Sans MS"));
+        font4.setPointSize(12);
+        font4.setBold(false);
+        font4.setItalic(false);
+        font4.setWeight(50);
+        labelQ->setFont(font4);
+        labelQ->setStyleSheet(QString::fromUtf8("background-color: none;\n"
+"color: white;"));
+        labelQ->setAlignment(Qt::AlignCenter);
 
         retranslateUi(QuizShow);
 
-        listWidget->setCurrentRow(14);
+        listWidget->setCurrentRow(-1);
 
 
         QMetaObject::connectSlotsByName(QuizShow);
@@ -275,10 +331,9 @@ public:
     void retranslateUi(QWidget *QuizShow)
     {
         QuizShow->setWindowTitle(QApplication::translate("QuizShow", "QuizShow", 0, QApplication::UnicodeUTF8));
-        button_resign->setText(QApplication::translate("QuizShow", "R", 0, QApplication::UnicodeUTF8));
-        button_fifty_fifty->setText(QApplication::translate("QuizShow", "1/2", 0, QApplication::UnicodeUTF8));
-        button_phone->setText(QApplication::translate("QuizShow", "T", 0, QApplication::UnicodeUTF8));
-        button_public->setText(QApplication::translate("QuizShow", "P", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        frame->setToolTip(QApplication::translate("QuizShow", "Aby wyj\305\233\304\207 z programu wci\305\233nij Ctrl + Q", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
         button_next->setText(QApplication::translate("QuizShow", "Kliknij aby rozpocz\304\205\304\207 gr\304\231", 0, QApplication::UnicodeUTF8));
 
         const bool __sortingEnabled = listWidget->isSortingEnabled();
@@ -315,12 +370,29 @@ public:
         ___qlistwidgetitem14->setText(QApplication::translate("QuizShow", " 1     100", 0, QApplication::UnicodeUTF8));
         listWidget->setSortingEnabled(__sortingEnabled);
 
-        labelQ->setText(QApplication::translate("QuizShow", "Tre\305\233\304\207 pytania", 0, QApplication::UnicodeUTF8));
-        button_answA->setText(QApplication::translate("QuizShow", "odpA", 0, QApplication::UnicodeUTF8));
-        button_answB->setText(QApplication::translate("QuizShow", "odpB", 0, QApplication::UnicodeUTF8));
-        button_answC->setText(QApplication::translate("QuizShow", "odpC", 0, QApplication::UnicodeUTF8));
-        button_answD->setText(QApplication::translate("QuizShow", "odpD", 0, QApplication::UnicodeUTF8));
-        label_test->setText(QApplication::translate("QuizShow", "TextLabel", 0, QApplication::UnicodeUTF8));
+        labelBack->setText(QString());
+        button_answA->setText(QString());
+        button_answB->setText(QString());
+        button_answC->setText(QString());
+        button_answD->setText(QString());
+        label_test->setText(QString());
+#ifndef QT_NO_TOOLTIP
+        button_resign->setToolTip(QApplication::translate("QuizShow", "Rezygnacja gracza", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        button_resign->setText(QString());
+#ifndef QT_NO_TOOLTIP
+        button_fifty_fifty->setToolTip(QApplication::translate("QuizShow", "P\303\263\305\202 na p\303\263\305\202", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        button_fifty_fifty->setText(QString());
+#ifndef QT_NO_TOOLTIP
+        button_phone->setToolTip(QApplication::translate("QuizShow", "Telefon do przyjaciela.", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        button_phone->setText(QString());
+#ifndef QT_NO_TOOLTIP
+        button_public->setToolTip(QApplication::translate("QuizShow", "Publiczno\305\233\304\207", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        button_public->setText(QString());
+        labelQ->setText(QApplication::translate("QuizShow", "Witaj na teleturnieju QMilion!", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

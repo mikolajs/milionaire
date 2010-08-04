@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'QuizShow.h'
 **
-** Created: Mon Jun 14 22:43:43 2010
+** Created: Wed Aug 4 17:17:48 2010
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_QuizShow[] = {
        4,       // revision
        0,       // classname
        0,    0, // classinfo
-       9,   14, // methods
+      12,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -40,6 +40,9 @@ static const uint qt_meta_data_QuizShow[] = {
      109,    9,    9,    9, 0x0a,
      124,    9,    9,    9, 0x0a,
      138,    9,    9,    9, 0x0a,
+     159,    9,    9,    9, 0x0a,
+     171,    9,    9,    9, 0x0a,
+     186,    9,    9,    9, 0x0a,
 
        0        // eod
 };
@@ -49,7 +52,8 @@ static const char qt_meta_stringdata_QuizShow[] = {
     "selectAnswerC()\0selectAnswerD()\0"
     "resignAction()\0fifty_fiftyAction()\0"
     "publicAction()\0phoneAction()\0"
-    "nextQuestion()\0"
+    "showCongratulation()\0showPrice()\0"
+    "showQuestion()\0showFullWins()\0"
 };
 
 const QMetaObject QuizShow::staticMetaObject = {
@@ -89,10 +93,13 @@ int QuizShow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 5: fifty_fiftyAction(); break;
         case 6: publicAction(); break;
         case 7: phoneAction(); break;
-        case 8: nextQuestion(); break;
+        case 8: showCongratulation(); break;
+        case 9: showPrice(); break;
+        case 10: showQuestion(); break;
+        case 11: showFullWins(); break;
         default: ;
         }
-        _id -= 9;
+        _id -= 12;
     }
     return _id;
 }

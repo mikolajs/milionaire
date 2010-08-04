@@ -6,6 +6,7 @@ QuestionShow::QuestionShow()
 {
 
     std::srand(std::time(NULL));
+
     //sprawdź możliwość wykonania pełnej gry
 
     //rozpocznij grę lub wyświetl komunikat o błędzie
@@ -34,6 +35,24 @@ int QuestionShow::getRand(int range)
 
     return int(double(range) * (double(std::rand()) /double( RAND_MAX) )) ;
 }
+
+//////////////////////////////// private ///////////////
+
+void QuestionShow::makeQuestListContener()
+{
+
+    for (int i = 1; i <= MAX_QUEST_LIST; i++) {
+        QList<Quest> tempList;
+        for (QVector<Quest>::iterator it = questVector.begin(); it != questVector.end(); ++it) {
+            if ((*it).level == i) {
+                tempList.append(*it);
+            }
+        }
+        questLists.append(tempList);
+    }
+   questVector.clear(); //nie wiadomo czy bezpieczne!
+}
+
 
 QString QuestionShow::test(int size)
 {
