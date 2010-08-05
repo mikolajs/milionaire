@@ -4,8 +4,8 @@
 
 #include "QuizEdit.h"
 #include "ui_QuizEdit.h"
-#include "QuestionsE.h"
-#include "QuestE.h"
+#include "Questions.h"
+#include "Quest.h"
 
 
 QuizEdit::QuizEdit(QWidget *parent) : QWidget(parent), ui(new Ui::QuizEdit)
@@ -24,7 +24,7 @@ QuizEdit::QuizEdit(QWidget *parent) : QWidget(parent), ui(new Ui::QuizEdit)
     connect(ui->pbutton_edytuj, SIGNAL(clicked()), this, SLOT(alterQuest()));
     connect(ui->pbutton_usun, SIGNAL(clicked()), this, SLOT(deleteQuest()));
     connect(ui->listWidget, SIGNAL(currentRowChanged(int)), this, SLOT(questClicked(int)));
-
+    m_questions = 0;
 }
 
 QuizEdit::~QuizEdit()
@@ -50,8 +50,10 @@ void QuizEdit::createTestFileNew()
     ui->lineEdit_B->clear();
     ui->lineEdit_C->clear();
     ui->lineEdit_D->clear();
-    m_questions->clear();
-    refreshView();
+    if (m_questions) {
+        m_questions->clear();
+        refreshView();
+    }
 }
 
 // ładuje istniejący test
@@ -91,29 +93,35 @@ void QuizEdit::saveTestFileOld()
 //wyświetl następne pytanie
 void QuizEdit::nextQuest()
 {
-    int row = ui->listWidget->currentRow();
-    if (row < m_questions->questVector.size() -1) {
-        row++;
-        ui->listWidget->setCurrentRow(row);
-        //showQuest();
+
+
+    if (m_questions) {
+        int row = ui->listWidget->currentRow();
+        if (row < m_questions->questVector.size() -1 && row > -1) {
+            row++;
+            ui->listWidget->setCurrentRow(row);
+            //showQuest();
+        }
     }
 }
 
 //wyświetl poprzednie pytanie
 void QuizEdit::previousQuest()
 {
-     int row = ui->listWidget->currentRow();
-     if (row > 0) {
-         row--;
-         ui->listWidget->setCurrentRow(row);
-         //showQuest();
-     }
+    if (m_questions) {
+        int row = ui->listWidget->currentRow();
+        if (row > 0 && row < m_questions->questVector.size() -1) {
+            row--;
+            ui->listWidget->setCurrentRow(row);
+            //showQuest();
+        }
+    }
 }
 
 //dodaje nowe pytanie
 void QuizEdit::addNewQuest()
 {
-    QuestE q;
+    Quest q;
     q.correct = ui->comboBox_2->currentText()[0];
     q.level = ui->comboBox->currentText().toInt();
     q.question = ui->textEdit->document()->toPlainText();
@@ -138,7 +146,7 @@ void QuizEdit::alterQuest()
         return;
     }
     int row = ui->listWidget->currentRow();
-    QuestE& q = m_questions->questVector[row];
+    Quest& q = m_questions->questVector[row];
     q.correct = ui->comboBox_2->currentText()[0];
     q.level = ui->comboBox->currentText().toInt();
     q.question = ui->textEdit->document()->toPlainText();
@@ -153,8 +161,11 @@ void QuizEdit::alterQuest()
 void QuizEdit::deleteQuest()
 {
     int row = ui->listWidget->currentRow();
-    m_questions->questVector.remove(row);
-    refreshView();
+    if (m_questions && row > -1 && row < m_questions->questVector.size() ) {
+        m_questions->questVector.remove(row);
+        refreshView();
+    }
+
 }
 
 //wybiera test po kliknięciu go na liście
@@ -168,7 +179,7 @@ void QuizEdit::questClicked(int row)
 bool QuizEdit::loadQuiz()
 {
     if(m_questions) delete m_questions;
-    m_questions = new QuestionsE();
+    m_questions = new Questions();
     m_questions->set_filename(ui->lineEdit->text());
     if(m_questions->loadFile()) {
         refreshView();
@@ -185,7 +196,7 @@ void QuizEdit::refreshView()
 {
     //wyświetlanie listy
     QStringList strList;
-    for (QVector<QuestE>::iterator it = m_questions->questVector.begin(); it != m_questions->questVector.end(); ++it){
+    for (QVector<Quest>::iterator it = m_questions->questVector.begin(); it != m_questions->questVector.end(); ++it){
         strList.append(QString::number((*it).level) + " - " + (*it).question.left(50));
     }
     int tempRow = ui->listWidget->currentRow(); //backup
@@ -220,7 +231,7 @@ bool QuizEdit::saveQuiz()
 void QuizEdit::showQuest(int row)
 {
     //int row = ui->listWidget->currentRow();
-    QuestE& q = m_questions->questVector[row];
+    Quest& q = m_questions->questVector[row];
     ui->textEdit->setText(q.question);
     ui->lineEdit_A->setText(q.A);
     ui->lineEdit_B->setText(q.B);

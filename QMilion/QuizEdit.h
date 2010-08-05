@@ -2,7 +2,7 @@
 #define QUIZEDIT_H
 
 #include <QtGui/QWidget>
-#include "QuestionsE.h"
+#include "Questions.h"
 
 namespace Ui
 {
@@ -21,7 +21,7 @@ public:
 
 private:
     Ui::QuizEdit *ui;
-    QuestionsE* m_questions;
+    Questions* m_questions;
     //odswieża widok (listy, opisu i ścieżki) po załadowaniu pliku
     void refreshView();
     bool loadQuiz();

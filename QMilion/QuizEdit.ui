@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>788</width>
+    <width>800</width>
     <height>487</height>
    </rect>
   </property>
@@ -18,7 +18,7 @@
     <rect>
      <x>10</x>
      <y>100</y>
-     <width>441</width>
+     <width>451</width>
      <height>341</height>
     </rect>
    </property>
@@ -28,7 +28,17 @@
       <item>
        <widget class="QPushButton" name="pushButton_previous">
         <property name="text">
-         <string>&lt;&lt;</string>
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/main/images/arrow-left.png</normaloff>:/main/images/arrow-left.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>22</width>
+          <height>22</height>
+         </size>
         </property>
        </widget>
       </item>
@@ -48,7 +58,17 @@
       <item>
        <widget class="QPushButton" name="pushButton_next">
         <property name="text">
-         <string>&gt;&gt;</string>
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/main/images/arrow-right.png</normaloff>:/main/images/arrow-right.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>22</width>
+          <height>22</height>
+         </size>
         </property>
        </widget>
       </item>
@@ -234,19 +254,22 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
-       <widget class="QPushButton" name="pbutton_edytuj">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="text">
-         <string>Zapisz</string>
-        </property>
-       </widget>
-      </item>
-      <item>
        <widget class="QPushButton" name="pbutton_dodaj">
+        <property name="toolTip">
+         <string>Dodaj jako nowe pytanie</string>
+        </property>
         <property name="text">
          <string>Dodaj</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/main/images/list-add.png</normaloff>:/main/images/list-add.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>22</width>
+          <height>22</height>
+         </size>
         </property>
         <property name="default">
          <bool>true</bool>
@@ -254,9 +277,45 @@
        </widget>
       </item>
       <item>
+       <widget class="QPushButton" name="pbutton_edytuj">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="toolTip">
+         <string>Zapisz edytowane pytanie</string>
+        </property>
+        <property name="text">
+         <string>Nadpisz</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/main/images/edit-redo.png</normaloff>:/main/images/edit-redo.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>22</width>
+          <height>22</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="pbutton_usun">
+        <property name="toolTip">
+         <string>Usuń widoczne pytanie</string>
+        </property>
         <property name="text">
          <string>Usuń</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/main/images/list-remove.png</normaloff>:/main/images/list-remove.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>22</width>
+          <height>22</height>
+         </size>
         </property>
        </widget>
       </item>
@@ -267,7 +326,7 @@
   <widget class="QWidget" name="verticalLayoutWidget_2">
    <property name="geometry">
     <rect>
-     <x>460</x>
+     <x>470</x>
      <y>0</y>
      <width>321</width>
      <height>441</height>
@@ -284,8 +343,8 @@
     <rect>
      <x>10</x>
      <y>0</y>
-     <width>441</width>
-     <height>91</height>
+     <width>456</width>
+     <height>97</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -293,29 +352,81 @@
      <layout class="QHBoxLayout" name="horizontalLayout_6">
       <item>
        <widget class="QPushButton" name="pbutton_wczytaj">
+        <property name="toolTip">
+         <string>Otwórz plik z pytaniami</string>
+        </property>
         <property name="text">
          <string>Otwórz</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/main/images/document-open.png</normaloff>:/main/images/document-open.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>22</width>
+          <height>22</height>
+         </size>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pbutton_nowyTest">
+        <property name="toolTip">
+         <string>Stwórz nowy plik z pytaniami</string>
+        </property>
         <property name="text">
          <string>Nowy</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/main/images/document-new.png</normaloff>:/main/images/document-new.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>22</width>
+          <height>22</height>
+         </size>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pbutton_zapisz">
+        <property name="toolTip">
+         <string>Zapisz obecny plik</string>
+        </property>
         <property name="text">
          <string>Zapisz</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/main/images/document-save.png</normaloff>:/main/images/document-save.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>22</width>
+          <height>22</height>
+         </size>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pbutton_zapiszJako">
+        <property name="toolTip">
+         <string>Zapisz plik pod nową nazwą</string>
+        </property>
         <property name="text">
-         <string>Zapisz jako ...</string>
+         <string>Zapisz jako</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/main/images/document-save-as.png</normaloff>:/main/images/document-save-as.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>22</width>
+          <height>22</height>
+         </size>
         </property>
        </widget>
       </item>
@@ -374,7 +485,7 @@
     <rect>
      <x>10</x>
      <y>450</y>
-     <width>771</width>
+     <width>781</width>
      <height>31</height>
     </rect>
    </property>
@@ -502,6 +613,8 @@
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

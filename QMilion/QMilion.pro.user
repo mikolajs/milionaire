@@ -10,11 +10,11 @@
  </data>
  <data>
   <variable>RunConfiguration0-ProFile</variable>
-  <value type="QString">QuizEdit.pro</value>
+  <value type="QString">QMilion.pro</value>
  </data>
  <data>
   <variable>RunConfiguration0-RunConfiguration.name</variable>
-  <value type="QString">QuizEdit</value>
+  <value type="QString">QMilion</value>
  </data>
  <data>
   <variable>RunConfiguration0-UseDyldImageSuffix</variable>
@@ -76,11 +76,11 @@
   <valuemap type="QVariantMap">
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList">
-    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-rlbBWIaADT,guid=8fee4cfdbd529db213dd73f74c592335</value>
+    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-R8NEkVG9YX,guid=c086e4d98755fadebfefc4684c5ac76f</value>
     <value type="QString">DESKTOP_SESSION=default</value>
     <value type="QString">DISPLAY=:0.0</value>
     <value type="QString">DM_CONTROL=/var/run/xdmctl</value>
-    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-u2Homs/S.gpg-agent:1414:1</value>
+    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-gvuEW4/S.gpg-agent:1556:1</value>
     <value type="QString">GS_LIB=/home/ms/.fonts</value>
     <value type="QString">GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/ms/.gtkrc-2.0:/home/ms/.gtkrc-2.0-kde4:/home/ms/.kde/share/config/gtkrc-2.0</value>
     <value type="QString">GTK_RC_FILES=/etc/gtk/gtkrc:/home/ms/.gtkrc::/home/ms/.kde/share/config/gtkrc</value>
@@ -96,28 +96,28 @@
     <value type="QString">PWD=/home/ms/Dokumenty</value>
     <value type="QString">QTDIR=/usr/share/qt4</value>
     <value type="QString">QT_PLUGIN_PATH=/home/ms/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
-    <value type="QString">SESSION_MANAGER=local/ms-laptop:@/tmp/.ICE-unix/1556,unix/ms-laptop:/tmp/.ICE-unix/1556</value>
+    <value type="QString">SESSION_MANAGER=local/ms-laptop:@/tmp/.ICE-unix/1699,unix/ms-laptop:/tmp/.ICE-unix/1699</value>
     <value type="QString">SHELL=/bin/bash</value>
     <value type="QString">SHLVL=0</value>
-    <value type="QString">SSH_AGENT_PID=1413</value>
-    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-tpznCp1368/agent.1368</value>
+    <value type="QString">SSH_AGENT_PID=1555</value>
+    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-FwaDGt1510/agent.1510</value>
     <value type="QString">USER=ms</value>
     <value type="QString">WINDOWPATH=7</value>
     <value type="QString">XCURSOR_THEME=oxy-white</value>
     <value type="QString">XDG_DATA_DIRS=/usr/share:/usr/share:/usr/local/share</value>
-    <value type="QString">XDG_SESSION_COOKIE=4657fa97bb9b2c7c7a6ea2b84bb742de-1280910131.931675-174843109</value>
+    <value type="QString">XDG_SESSION_COOKIE=4657fa97bb9b2c7c7a6ea2b84bb742de-1281017709.768761-261179535</value>
     <value type="QString">XDM_MANAGED=method=classic</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList">
-    <value type="QString">/home/ms/Programs/cpp/milionaire/QuizEdit/QuizEdit.pro</value>
+    <value type="QString">/home/ms/Programs/cpp/milionaire/QMilion/QMilion.pro</value>
     <value type="QString">-spec</value>
     <value type="QString">linux-g++</value>
     <value type="QString">-r</value>
     <value type="QString">CONFIG+=debug</value>
    </valuelist>
    <value key="abstractProcess.command" type="QString">/usr/bin/qmake-qt4</value>
-   <value key="abstractProcess.enabled" type="bool">true</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/home/ms/Programs/cpp/milionaire/QuizEdit</value>
+   <value key="abstractProcess.enabled" type="bool">false</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/home/ms/Programs/cpp/milionaire/QMilion</value>
   </valuemap>
  </data>
  <data>
@@ -125,11 +125,11 @@
   <valuemap type="QVariantMap">
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList">
-    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-rlbBWIaADT,guid=8fee4cfdbd529db213dd73f74c592335</value>
+    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-R8NEkVG9YX,guid=c086e4d98755fadebfefc4684c5ac76f</value>
     <value type="QString">DESKTOP_SESSION=default</value>
     <value type="QString">DISPLAY=:0.0</value>
     <value type="QString">DM_CONTROL=/var/run/xdmctl</value>
-    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-u2Homs/S.gpg-agent:1414:1</value>
+    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-gvuEW4/S.gpg-agent:1556:1</value>
     <value type="QString">GS_LIB=/home/ms/.fonts</value>
     <value type="QString">GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/ms/.gtkrc-2.0:/home/ms/.gtkrc-2.0-kde4:/home/ms/.kde/share/config/gtkrc-2.0</value>
     <value type="QString">GTK_RC_FILES=/etc/gtk/gtkrc:/home/ms/.gtkrc::/home/ms/.kde/share/config/gtkrc</value>
@@ -145,16 +145,16 @@
     <value type="QString">PWD=/home/ms/Dokumenty</value>
     <value type="QString">QTDIR=/usr/share/qt4</value>
     <value type="QString">QT_PLUGIN_PATH=/home/ms/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
-    <value type="QString">SESSION_MANAGER=local/ms-laptop:@/tmp/.ICE-unix/1556,unix/ms-laptop:/tmp/.ICE-unix/1556</value>
+    <value type="QString">SESSION_MANAGER=local/ms-laptop:@/tmp/.ICE-unix/1699,unix/ms-laptop:/tmp/.ICE-unix/1699</value>
     <value type="QString">SHELL=/bin/bash</value>
     <value type="QString">SHLVL=0</value>
-    <value type="QString">SSH_AGENT_PID=1413</value>
-    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-tpznCp1368/agent.1368</value>
+    <value type="QString">SSH_AGENT_PID=1555</value>
+    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-FwaDGt1510/agent.1510</value>
     <value type="QString">USER=ms</value>
     <value type="QString">WINDOWPATH=7</value>
     <value type="QString">XCURSOR_THEME=oxy-white</value>
     <value type="QString">XDG_DATA_DIRS=/usr/share:/usr/share:/usr/local/share</value>
-    <value type="QString">XDG_SESSION_COOKIE=4657fa97bb9b2c7c7a6ea2b84bb742de-1280910131.931675-174843109</value>
+    <value type="QString">XDG_SESSION_COOKIE=4657fa97bb9b2c7c7a6ea2b84bb742de-1281017709.768761-261179535</value>
     <value type="QString">XDM_MANAGED=method=classic</value>
    </valuelist>
    <value key="abstractProcess.IgnoreReturnValue" type="bool">false</value>
@@ -163,7 +163,7 @@
    </valuelist>
    <value key="abstractProcess.command" type="QString">/usr/bin/make</value>
    <value key="abstractProcess.enabled" type="bool">true</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/home/ms/Programs/cpp/milionaire/QuizEdit</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/home/ms/Programs/cpp/milionaire/QMilion</value>
   </valuemap>
  </data>
  <data>
@@ -185,6 +185,7 @@
     <value type="QString">KDE_SESSION_UID=1000</value>
     <value type="QString">KDE_SESSION_VERSION=4</value>
     <value type="QString">LANG=pl_PL.UTF-8</value>
+    <value type="QString">LANGUAGE=</value>
     <value type="QString">LD_LIBRARY_PATH=/usr/lib/qtcreator:</value>
     <value type="QString">LOGNAME=ms</value>
     <value type="QString">PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
@@ -210,7 +211,7 @@
    </valuelist>
    <value key="abstractProcess.command" type="QString">/usr/bin/make</value>
    <value key="abstractProcess.enabled" type="bool">true</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/home/ms/Programs/cpp/milionaire/QuizEdit</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/home/ms/Programs/cpp/milionaire/QMilion</value>
    <value key="cleanConfig" type="bool">true</value>
    <valuelist key="makeargs" type="QVariantList">
     <value type="QString">clean</value>
@@ -277,7 +278,7 @@
  </data>
  <data>
   <variable>defaultFileEncoding</variable>
-  <value type="QByteArray">System</value>
+  <value type="QByteArray">UTF-8</value>
  </data>
  <data>
   <variable>project</variable>
