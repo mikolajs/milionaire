@@ -1,2 +1,5 @@
 *.[oa]
 *.*~
+qmilion
+ui_*.h
+moc_*
