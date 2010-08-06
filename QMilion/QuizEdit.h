@@ -18,6 +18,8 @@ public:
     ~QuizEdit();
     /** metoda pobierająca ścieżkę aktualnego quizu*/
     QString getPath();
+    //flaga zapisu - widoczna dla głównego okna
+    bool saved;
 
 private:
     Ui::QuizEdit *ui;
@@ -29,6 +31,8 @@ private:
     void showQuest(int row);
     //testowe
     void printRow();
+
+
 
 public slots:
     //tworzy nowy test w pliku i ładuje jego widok
