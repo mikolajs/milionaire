@@ -1,0 +1,9 @@
+/usr/local/share/doc/HTML/en/kmilion/index.cache.bz2
+/usr/local/share/doc/HTML/en/kmilion/index.docbook
+/usr/local/bin/kmilion
+/usr/local/share/applications/kde4/kmilion.desktop
+/usr/local/share/config.kcfg/kmilion.kcfg
+/usr/local/share/apps/kmilion/kmilionui.rc
+/usr/local/share/icons/hicolor/16x16/apps/./kmilion.png
+/usr/local/share/icons/hicolor/48x48/apps/./kmilion.png
+/usr/local/share/icons/hicolor/32x32/apps/./kmilion.png

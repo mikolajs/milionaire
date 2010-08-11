@@ -1,0 +1,8 @@
+# Hashes of file build rules.
+01092bd2e5b184dd94c73e58927fede2 CMakeFiles/uninstall
+54712d194fc65d6b789f4b004f3ec4b8 doc/CMakeFiles/doc-handbook
+f1709171a84e1943c6572fe1a1d5b2ac doc/index.cache.bz2
+9d8b1f0dc22a9b0f114eedde674e2d26 src/CMakeFiles/kmilion_automoc
+7d000698005defdc7096a05fa59fb7b3 src/qrc_resource.cxx
+fd39cb6419f22204031d52e98522878a src/ui_QuizEdit.h
+400a3d01fe691947ebf2cedd421cd980 src/ui_QuizShow.h

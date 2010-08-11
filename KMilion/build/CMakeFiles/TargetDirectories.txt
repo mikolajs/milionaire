@@ -1,0 +1,4 @@
+/home/ms/Programs/cpp/milionaire/KMilion/build/doc/CMakeFiles/doc-handbook.dir
+/home/ms/Programs/cpp/milionaire/KMilion/build/src/CMakeFiles/kmilion.dir
+/home/ms/Programs/cpp/milionaire/KMilion/build/src/CMakeFiles/kmilion_automoc.dir
+/home/ms/Programs/cpp/milionaire/KMilion/build/CMakeFiles/uninstall.dir

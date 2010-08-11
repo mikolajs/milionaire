@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'QuizShow.ui'
 **
-** Created: Thu Aug 5 10:31:50 2010
+** Created: Mon Aug 9 20:15:15 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

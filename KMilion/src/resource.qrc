@@ -1,0 +1,20 @@
+<RCC>
+  <qresource prefix="/main">
+    <file>images/arrow-right.png</file>
+    <file>images/edit-redo.png</file>
+    <file>images/list-add.png</file>
+    <file>images/list-remove.png</file>
+    <file>images/arrow-left.png</file>
+    <file>images/phone_no.png</file>
+    <file>images/public_no.png</file>
+    <file>images/fifty_no.png</file>
+    <file>images/cloud.png</file>
+    <file>images/fifty.png</file>
+    <file>images/exit.png</file>
+    <file>images/phone.png</file>
+    <file>images/public.png</file>
+    <file>images/phone.png</file>
+    <file>images/man_on_chair.png</file>
+    <file>images/bigbackground.png</file>
+  </qresource>
+</RCC>
