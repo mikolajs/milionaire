@@ -65,6 +65,7 @@ protected:
 
 private:
     
+  
     //KMilionView *m_view;
     void setupActions();
     
@@ -75,10 +76,10 @@ private:
     bool isGame;
     int screenWidth_;
     int screenHeight_;
-
+    
     //QPrinter   *m_printer;
-    KToggleAction *m_toolbarAction;
-    KToggleAction *m_statusbarAction;
+    //KToggleAction *m_toolbarAction;
+    //KToggleAction *m_statusbarAction;
 
 
 };

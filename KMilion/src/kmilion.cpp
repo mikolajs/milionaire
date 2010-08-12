@@ -55,6 +55,7 @@ KMilion::KMilion()
     statusBar()->show();
     
     
+    //scieżka do pliku z pytaniami
     
     
     QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));

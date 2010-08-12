@@ -32,6 +32,7 @@
 
 QuizEdit::QuizEdit(QWidget *parent) : QWidget(parent), ui(new Ui::QuizEdit)
 {
+  
     QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
     QTextCodec::setCodecForTr(QTextCodec::codecForName("UTF-8"));
     m_questions = 0; //zeruje wskaźnik
@@ -49,6 +50,7 @@ QuizEdit::QuizEdit(QWidget *parent) : QWidget(parent), ui(new Ui::QuizEdit)
     m_questions = 0;
     saved = true; //flaga zapisu
 
+    filePath = QDir::homePath() + "/.config/kmilion";
 }
 
 QuizEdit::~QuizEdit()
@@ -73,7 +75,7 @@ void QuizEdit::createTestFileNew()
         if ( QMessageBox::question(this,i18n("Unsaved file"),i18n("Unsaved file! \n Do you want to save old file first?"),QMessageBox::Ok, QMessageBox::Cancel) == QMessageBox::Ok) saveTestFileOld();
     }
 
-    QString p  = QFileDialog::getOpenFileName(this, i18n("Create new file"), "", tr("Xml files (*.xml);;All Files (*)"));
+    QString p  = QFileDialog::getOpenFileName (this, i18n("Create new file"),filePath, tr("Xml files (*.xml);;All Files (*)"));
     if (p.isEmpty()) return; //nie wybrano nazwy
     ui->lineEdit->setText(p);
     ui->listWidget->clear();
@@ -99,7 +101,7 @@ void QuizEdit::loadTestFile()
         if ( QMessageBox::question(this,i18n("Unsaved file"),i18n("Unsaved file! \n Do you want to save old file first?"),QMessageBox::Ok, QMessageBox::Cancel) == QMessageBox::Ok) saveTestFileOld();
     }
 
-    QString p = QFileDialog::getOpenFileName(this, i18n("Open existed quiz file"), "", tr("Xml files (*.xml);;All Files (*)"));
+    QString p = QFileDialog::getOpenFileName(this, i18n("Open existed quiz file"),filePath, tr("Xml files (*.xml);;All Files (*)"));
     if (!p.isEmpty()) ui->lineEdit->setText(p);
 
     qDebug() << ("ścieżka ładowania starego: " + ui->lineEdit->text());
@@ -114,7 +116,7 @@ void QuizEdit::loadTestFile()
 //zapisuje jako ...
 void QuizEdit::saveTestFileNew()
 {
-    QString p = QFileDialog::getSaveFileName(this, i18n("Save quiz as a new file"), "", tr("Xml files (*.xml);;All Files (*)"));
+    QString p = QFileDialog::getSaveFileName(this, i18n("Save quiz as a new file"), filePath, tr("Xml files (*.xml);;All Files (*)"));
     if (!p.isEmpty()) ui->lineEdit->setText(p);
     if(!saveQuiz()) {
         qDebug() << "Nie mozna zapis pliku! QuizEdit::SaveTestFile::SaveTest";

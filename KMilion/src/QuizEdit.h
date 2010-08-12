@@ -22,6 +22,7 @@
 #define QUIZEDIT_H
 
 #include <QtGui/QWidget>
+#include <QtCore/QString>
 #include "Questions.h"
 
 namespace Ui
@@ -51,7 +52,8 @@ private:
     void showQuest(int row);
     //testowe
     void printRow();
-
+    //ścieżka do config/kmilion
+    QString filePath;
 
 
 public slots:
@@ -77,6 +79,7 @@ public slots:
     //??void refresh();
     //wybiera test po kliknięciu go na liście
     void questClicked(int row);
+    
 };
 
 #endif // QUIZEDIT_H

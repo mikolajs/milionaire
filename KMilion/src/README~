@@ -1,5 +1,6 @@
 Funkcjonalność do przetestowania.
 
-Błędy:
-- wybrany ostatni element listy - nie chce wrócić poprzedni po naciśnięciu przyciku next???
-- zmniejszyć ilość opcji w menubar
+TODO:
+wczytywanie testów z katalogu ~/.config/kmilion/
+dokumentacja
+plik testu 
